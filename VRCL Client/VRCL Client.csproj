@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <PublishSingleFile>true</PublishSingleFile>
+    <ApplicationIcon>vrcl_shell.ico</ApplicationIcon>
+    <AssemblyName>VRCL Client</AssemblyName>
+    <RootNamespace>VRCLClient</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="Themes\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Update\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Resource Include="wolf_logo.png" />
+    <None Update="wolf_logo.png" CopyToOutputDirectory="PreserveNewest" />
+    <Resource Include="vrcl_shell.ico" />
+    <None Update="vrcl_shell.ico" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <PropertyGroup><VRCLReadMeContent>VRCL Client - READ ME&#xA;&#xA;If you are having trouble finding the app:&#xA;&#xA;Open File Explorer and go to View.&#xA;If &quot;Hidden items&quot; is enabled, turn it off.&#xA;&#xA;VRCL Client.exe is the main app.</VRCLReadMeContent></PropertyGroup>
+  <Target Name="AfterPublishFormatOutput" AfterTargets="Publish">
+    <PropertyGroup><PublishedReadme>$(PublishDir)(READ ME).txt</PublishedReadme></PropertyGroup>
+    <WriteLinesToFile File="$(PublishedReadme)" Lines="$(VRCLReadMeContent)" Overwrite="true" Encoding="UTF-8" />
+  </Target>
+</Project>
