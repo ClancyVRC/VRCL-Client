@@ -1,9 +1,10 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "repository": {
     "owner": "ClancyVRC",
     "name": "VRCL-Client"
   },
+  "default_channel": "beta",
   "channels": {
     "beta": {
       "asset_pattern": "VRCL_Client_{version}.zip",
@@ -15,10 +16,9 @@
     }
   },
   "latest_release_api": "https://api.github.com/repos/ClancyVRC/VRCL-Client/releases/latest",
-  "release_list_api": "https://api.github.com/repos/ClancyVRC/VRCL-Client/releases?per_page=30",
+  "release_list_api": "https://api.github.com/repos/ClancyVRC/VRCL-Client/releases?per_page=50",
   "release_tag_pattern": "v{version}",
-  "installer_asset_name": "VRCL.Installer.exe",
-  "updater_asset_name": "VRCL Updater.exe",
+  "updater_filename": "VRCL Updater.exe",
   "client_package_root": "VRCL_Client_{version}/VRCL Client",
-  "protected_data_directory": "Data"
+  "protected_directory": "Data"
 }
