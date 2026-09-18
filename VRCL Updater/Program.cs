@@ -260,7 +260,7 @@ internal sealed class UpdaterForm : Form
         return Convert.ToHexString(hash);
     }
 
-    static async Task WaitForProcessExitAsync(int pid, TimeSpan timeout)
+    async Task WaitForProcessExitAsync(int pid, TimeSpan timeout)
     {
         try
         {
