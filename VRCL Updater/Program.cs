@@ -106,10 +106,11 @@ internal sealed class UpdaterForm : Form
                 ZipFile.ExtractToDirectory(zip, extract, overwriteFiles: false);
                 var payload = FindPayloadRoot(extract, opt.Version);
                 ValidatePayload(payload);
+                var deleteList = ReadDeleteManifest(payload);
 
                 SetStatus("Installing update…", "Preserving your Data folder");
                 progress.Style = ProgressBarStyle.Marquee;
-                var selfUpdate = await Task.Run(() => ApplyPayload(payload, target), cts.Token);
+                var selfUpdate = await Task.Run(() => ApplyPayload(payload, target, deleteList), cts.Token);
                 progress.Style = ProgressBarStyle.Continuous;
                 progress.Value = 100;
 
@@ -188,7 +189,28 @@ internal sealed class UpdaterForm : Form
             throw new InvalidDataException("VRCL Updater.exe is missing from the update payload.");
     }
 
-    static string? ApplyPayload(string payload, string target)
+    static List<string> ReadDeleteManifest(string payload)
+    {
+        foreach (var manifest in new[]
+        {
+            Path.Combine(payload, "update_manifest.json"),
+            Path.Combine(payload, "Update", "update_manifest.json")
+        })
+        {
+            if (!File.Exists(manifest)) continue;
+            using var doc = JsonDocument.Parse(File.ReadAllText(manifest));
+            if (!doc.RootElement.TryGetProperty("delete", out var items) || items.ValueKind != JsonValueKind.Array)
+                return new List<string>();
+            return items.EnumerateArray()
+                .Where(x => x.ValueKind == JsonValueKind.String)
+                .Select(x => x.GetString() ?? "")
+                .Where(x => !string.IsNullOrWhiteSpace(x))
+                .ToList();
+        }
+        return new List<string>();
+    }
+
+    static string? ApplyPayload(string payload, string target, IReadOnlyList<string> deleteList)
     {
         string? stagedUpdater = null;
         foreach (var dir in Directory.EnumerateDirectories(payload, "*", SearchOption.AllDirectories))
@@ -218,6 +240,29 @@ internal sealed class UpdaterForm : Form
 
             File.SetAttributes(destination, FileAttributes.Normal);
             File.Copy(file, destination, overwrite: true);
+        }
+
+        foreach (var relative in deleteList)
+        {
+            var normalized = relative.Replace('/', Path.DirectorySeparatorChar).Replace('\\', Path.DirectorySeparatorChar).TrimStart(Path.DirectorySeparatorChar);
+            if (normalized.Equals("Data", StringComparison.OrdinalIgnoreCase) ||
+                normalized.StartsWith("Data" + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
+                throw new InvalidDataException("The update manifest attempted to delete protected Data files.");
+
+            var destination = Path.GetFullPath(Path.Combine(target, normalized));
+            var targetRoot = Path.GetFullPath(target).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
+            if (!destination.StartsWith(targetRoot, StringComparison.OrdinalIgnoreCase))
+                throw new InvalidDataException("The update manifest contains a path outside the VRCL installation.");
+
+            if (File.Exists(destination))
+            {
+                File.SetAttributes(destination, FileAttributes.Normal);
+                File.Delete(destination);
+            }
+            else if (Directory.Exists(destination))
+            {
+                Directory.Delete(destination, true);
+            }
         }
 
         return stagedUpdater;
