@@ -1,15 +1,23 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "release_tag": "v{version}",
   "client_package": "VRCL_Client_{version}.zip",
   "client_package_root": "VRCL_Client_{version}/VRCL Client/",
   "required_release_assets": [
     "VRCL_Client_{version}.zip"
   ],
-  "future_release_assets": [
-    "VRCL.Installer.exe",
+  "bundled_application_files": [
+    "VRCL Client.exe",
     "VRCL Updater.exe"
   ],
   "protected_directory": "Data/",
-  "notes": "GitHub repository: ClancyVRC/VRCL-Client"
+  "optional_update_manifest": "Update/update_manifest.json",
+  "update_rules": {
+    "replace_application_files": true,
+    "preserve_protected_directory": true,
+    "allow_payload_data_directory": false,
+    "require_client_executable": true,
+    "require_updater_executable": true
+  },
+  "notes": "Published beta releases are consumed from ClancyVRC/VRCL-Client. VRCL Updater is bundled inside the client package; Installer.exe remains a separate distribution application."
 }

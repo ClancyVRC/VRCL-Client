@@ -1,4 +1,4 @@
-name: VRCL Client Build
+name: VRCL Update Infrastructure
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  updater:
     runs-on: windows-latest
 
     steps:
@@ -20,19 +20,44 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Restore
-        run: dotnet restore "VRCL Client/VRCL Client.csproj"
+      - name: Restore updater
+        run: dotnet restore "VRCL Updater/VRCL Updater.csproj"
 
-      - name: Build
-        run: dotnet build "VRCL Client/VRCL Client.csproj" -c Release --no-restore
+      - name: Build updater
+        run: dotnet build "VRCL Updater/VRCL Updater.csproj" -c Release --no-restore
 
-      - name: Publish
-        run: dotnet publish "VRCL Client/VRCL Client.csproj" -c Release -r win-x64 --self-contained false -o "publish/VRCL Client"
+      - name: Publish updater
+        run: dotnet publish "VRCL Updater/VRCL Updater.csproj" -c Release -r win-x64 --self-contained false -o "publish/VRCL Updater"
 
-      - name: Verify executable
+      - name: Verify updater
         shell: pwsh
         run: |
-          $exe = "publish/VRCL Client/VRCL Client.exe"
+          $exe = "publish/VRCL Updater/VRCL Updater.exe"
           if (-not (Test-Path -LiteralPath $exe)) {
-            Write-Error "VRCL Client.exe was not produced."
+            throw "VRCL Updater.exe was not produced."
+          }
+
+      - name: Validate GitHub update metadata
+        shell: pwsh
+        run: |
+          $required = @(
+            "VRCL Client/Update/GitHubUpdateChecker.cs",
+            "VRCL Client/Update/github_release_config.template.json",
+            "VRCL Client/Update/release_structure.json"
+          )
+          foreach ($path in $required) {
+            if (-not (Test-Path -LiteralPath $path)) {
+              throw "Required GitHub update file missing: $path"
+            }
+          }
+
+      - name: Validate repository configuration
+        shell: pwsh
+        run: |
+          $config = Get-Content "VRCL Client/Update/github_release_config.template.json" -Raw | ConvertFrom-Json
+          if ($config.repository.owner -ne "ClancyVRC" -or $config.repository.name -ne "VRCL-Client") {
+            throw "GitHub repository configuration is incorrect."
+          }
+          if ($config.channels.beta.prerelease -ne $true) {
+            throw "Beta channel must target prerelease GitHub releases."
           }
