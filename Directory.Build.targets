@@ -1,0 +1,18 @@
+<Project>
+  <Target Name="GenerateVrclVersionMetadata" AfterTargets="Publish">
+    <PropertyGroup>
+      <VrclThemesPublishDir>$(PublishDir)Themes</VrclThemesPublishDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(VrclThemesPublishDir)" />
+    <WriteLinesToFile
+      File="$(VrclThemesPublishDir)/vrcl_version.json"
+      Lines="{;  &quot;version&quot;: &quot;$(VrclVersion)&quot;;}"
+      Overwrite="true"
+      Encoding="UTF-8" />
+    <WriteLinesToFile
+      File="$(VrclThemesPublishDir)/build_defaults.json"
+      Lines="{;  &quot;build_id&quot;: &quot;vrcl-client-$(VrclVersion)&quot;;}"
+      Overwrite="true"
+      Encoding="UTF-8" />
+  </Target>
+</Project>
