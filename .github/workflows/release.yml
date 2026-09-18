@@ -1,0 +1,55 @@
+name: VRCL Beta Release
+
+on:
+  push:
+    tags:
+      - 'v*-beta*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore "VRCL Client/VRCL Client.csproj"
+
+      - name: Publish
+        run: dotnet publish "VRCL Client/VRCL Client.csproj" -c Release -r win-x64 --self-contained false -o "release/VRCL Client"
+
+      - name: Verify package
+        shell: pwsh
+        run: |
+          $root = "release/VRCL Client"
+          foreach ($name in @("VRCL Client.exe", "VRCL Updater.exe")) {
+            if (-not (Test-Path -LiteralPath (Join-Path $root $name))) { throw "$name is missing from the release." }
+          }
+          if (Test-Path -LiteralPath (Join-Path $root "Data")) { throw "Data must never be packaged into a release." }
+
+      - name: Create release ZIP
+        shell: pwsh
+        run: |
+          $version = $env:GITHUB_REF_NAME.TrimStart('v')
+          $packageRoot = "release/VRCL_Client_$version/VRCL Client"
+          New-Item -ItemType Directory -Force -Path $packageRoot | Out-Null
+          Copy-Item -Path "release/VRCL Client/*" -Destination $packageRoot -Recurse -Force
+          $zip = "release/VRCL_Client_$version.zip"
+          Compress-Archive -Path "release/VRCL_Client_$version" -DestinationPath $zip -Force
+          "ZIP=$zip" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+
+      - name: Publish GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create $env:GITHUB_REF_NAME $env:ZIP --prerelease --title "VRCL Client $env:GITHUB_REF_NAME" --generate-notes
