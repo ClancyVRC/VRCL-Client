@@ -1,5 +1,11 @@
 <Project>
+  <!-- AUTHORITATIVE VRCL RELEASE VERSION. Update this value for the next release. -->
   <PropertyGroup>
     <VrclVersion>1.9.95-beta</VrclVersion>
+    <VrclVersionNumber>1.9.95</VrclVersionNumber>
+    <Version>$(VrclVersion)</Version>
+    <AssemblyVersion>$(VrclVersionNumber).0</AssemblyVersion>
+    <FileVersion>$(VrclVersionNumber).0</FileVersion>
+    <InformationalVersion>$(VrclVersion)</InformationalVersion>
   </PropertyGroup>
 </Project>
