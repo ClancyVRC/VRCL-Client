@@ -20,19 +20,35 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Restore
+      - name: Restore client
         run: dotnet restore "VRCL Client/VRCL Client.csproj"
 
-      - name: Build
+      - name: Build client
         run: dotnet build "VRCL Client/VRCL Client.csproj" -c Release --no-restore
 
-      - name: Publish
+      - name: Publish client and bundled updater
         run: dotnet publish "VRCL Client/VRCL Client.csproj" -c Release -r win-x64 --self-contained false -o "publish/VRCL Client"
 
-      - name: Verify executable
+      - name: Verify release payload
         shell: pwsh
         run: |
-          $exe = "publish/VRCL Client/VRCL Client.exe"
-          if (-not (Test-Path -LiteralPath $exe)) {
-            Write-Error "VRCL Client.exe was not produced."
+          $root = "publish/VRCL Client"
+          $client = Join-Path $root "VRCL Client.exe"
+          $updater = Join-Path $root "VRCL Updater.exe"
+          if (-not (Test-Path -LiteralPath $client)) { throw "VRCL Client.exe was not produced." }
+          if (-not (Test-Path -LiteralPath $updater)) { throw "VRCL Updater.exe was not produced." }
+          if (Test-Path -LiteralPath (Join-Path $root "Data")) { throw "Data must not be part of the release payload." }
+
+      - name: Validate updater source
+        shell: pwsh
+        run: |
+          $required = @(
+            "VRCL Updater/VRCL Updater.csproj",
+            "VRCL Updater/Program.cs",
+            "VRCL Client/Update/GitHubUpdateChecker.cs",
+            "VRCL Client/Update/github_release_config.template.json",
+            "VRCL Client/Update/release_structure.json"
+          )
+          foreach ($path in $required) {
+            if (-not (Test-Path -LiteralPath $path)) { throw "Required updater/GitHub file missing: $path" }
           }
