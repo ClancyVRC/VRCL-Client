@@ -11,6 +11,7 @@
     "VRCL Updater.exe"
   ],
   "protected_directory": "Data/",
+  "optional_update_manifest": "Update/update_manifest.json",
   "update_rules": {
     "replace_application_files": true,
     "preserve_protected_directory": true,
