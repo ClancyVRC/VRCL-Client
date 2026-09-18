@@ -1,7 +1,7 @@
 # VRCL Client
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ClancyVRC/VRCL-Client/main/VRCL%20Client/wolf_logo.png" width="110" alt="VRCL Client">
+  <img src="assets/vrcl-logo.svg" width="110" alt="VRCL Client wolf logo">
 </p>
 
 <h1 align="center">VRCL Client</h1>
