@@ -138,18 +138,6 @@ Future releases can also contain the standalone installer and other release comp
 | **Stable** | Future production-ready releases |
 
 ---
-
-## 🐺 Built For Windows
-
-VRCL Client is currently developed for:
-
-- **Windows x64**
-- **.NET 10 Windows Desktop**
-- **WPF**
-- **C#**
-
-The repository contains the project's source code and release/update infrastructure. **End users should use the pre-built installer or release package instead of manually compiling the project.**
-
 ---
 
 ## 📥 Getting VRCL Client
