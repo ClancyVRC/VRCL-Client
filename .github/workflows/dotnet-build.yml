@@ -1,0 +1,38 @@
+name: VRCL Client Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore "VRCL Client/VRCL Client.csproj"
+
+      - name: Build
+        run: dotnet build "VRCL Client/VRCL Client.csproj" -c Release --no-restore
+
+      - name: Publish
+        run: dotnet publish "VRCL Client/VRCL Client.csproj" -c Release -r win-x64 --self-contained false -o "publish/VRCL Client"
+
+      - name: Verify executable
+        shell: pwsh
+        run: |
+          $exe = "publish/VRCL Client/VRCL Client.exe"
+          if (-not (Test-Path -LiteralPath $exe)) {
+            Write-Error "VRCL Client.exe was not produced."
+          }
