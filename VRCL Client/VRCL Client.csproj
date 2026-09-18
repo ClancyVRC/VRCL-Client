@@ -23,9 +23,14 @@
     <Resource Include="vrcl_shell.ico" />
     <None Update="vrcl_shell.ico" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+
   <PropertyGroup><VRCLReadMeContent>VRCL Client - READ ME&#xA;&#xA;If you are having trouble finding the app:&#xA;&#xA;Open File Explorer and go to View.&#xA;If &quot;Hidden items&quot; is enabled, turn it off.&#xA;&#xA;VRCL Client.exe is the main app.</VRCLReadMeContent></PropertyGroup>
   <Target Name="AfterPublishFormatOutput" AfterTargets="Publish">
-    <PropertyGroup><PublishedReadme>$(PublishDir)(READ ME).txt</PublishedReadme></PropertyGroup>
+    <PropertyGroup>
+      <PublishedReadme>$(PublishDir)(READ ME).txt</PublishedReadme>
+    </PropertyGroup>
     <WriteLinesToFile File="$(PublishedReadme)" Lines="$(VRCLReadMeContent)" Overwrite="true" Encoding="UTF-8" />
+    <Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;$p='$(PublishDir)'; $exe=Join-Path $p 'VRCL Client.exe'; $keep=@('VRCL Client.exe','(READ ME).txt'); Get-ChildItem -LiteralPath $p -Force | Where-Object { $keep -notcontains $_.Name } | ForEach-Object { $_.Attributes = $_.Attributes -bor [IO.FileAttributes]::Hidden }; Get-ChildItem -LiteralPath $p -Directory -Force | ForEach-Object { $_.Attributes = $_.Attributes -bor [IO.FileAttributes]::Hidden }; if(Test-Path -LiteralPath $exe){ $desktop=[Environment]::GetFolderPath('Desktop'); if($desktop){ $lnk=Join-Path $desktop 'VRCL Client.lnk'; $wsh=New-Object -ComObject WScript.Shell; $sc=$wsh.CreateShortcut($lnk); $sc.TargetPath=$exe; $sc.WorkingDirectory=$p; $sc.Description='Launch VRCL Client'; $ico=Join-Path $p 'vrcl_shell.ico'; if(Test-Path -LiteralPath $ico){ $sc.IconLocation=$ico+',0' }; $sc.Save() } }&quot;" />
   </Target>
+
 </Project>
