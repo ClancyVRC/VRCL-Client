@@ -1,7 +1,7 @@
 # VRCL Client
 
 <p align="center">
-  <img src="assets/vrcl-logo.svg" width="110" alt="VRCL Client wolf logo">
+  <img src="assets/vrcl-app-icon.webp" width="110" alt="VRCL Client wolf logo">
 </p>
 
 <h1 align="center">VRCL Client</h1>
