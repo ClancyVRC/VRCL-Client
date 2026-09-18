@@ -7,32 +7,141 @@
 <h1 align="center">VRCL Client</h1>
 
 <p align="center">
-  A custom Windows launcher and control client built around VRChat, SteamVR, and Meta PCVR.
+  A Windows launcher and control client for VRChat PCVR setups.
 </p>
 
 <p align="center">
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases/latest/download/VRCL.Installer.exe">
-    <strong>⬇️ Download VRCL Client Installer</strong>
+    <strong>⬇️ DOWNLOAD VRCL CLIENT INSTALLER</strong>
   </a>
-</p>
-
-<p align="center">
-  <strong>Current installer build: v1.0.0-release-beta</strong>
 </p>
 
 ---
 
-## What is VRCL Client?
+## 🚀 Start Here
 
-**VRCL Client** is a dedicated Windows application for managing and launching a VRChat PCVR setup without turning the process into a pile of separate shortcuts, scripts, and setup steps.
+### What you need
 
-It brings VRChat launching, SteamVR handling, Meta/Quest PCVR options, settings, keybinds, tray controls, themes, and update support together in one place.
+- A **64-bit Windows PC**.
+- An internet connection for the first installation and for downloading releases/updates.
+- The **VRCL Installer** from the button above.
+- VRChat and the VR platform/software you want VRCL Client to launch, such as SteamVR or Meta/Quest PCVR, depending on your setup.
 
-The goal is simple: **install it, set it up once, and use VRCL Client as your everyday VRChat launch hub.**
+**You do not need to download the source code, open Visual Studio, install a compiler, or build VRCL Client yourself.**
 
-## ✦ Features
+### 1. Download the installer
 
-### 🎮 VRChat Launching
+Click **Download VRCL Client Installer** at the top of this page.
+
+The installer is the normal starting point for a new user.
+
+### 2. Run the installer
+
+Open:
+
+`VRCL.Installer.exe`
+
+The installer checks the project's GitHub Releases when it starts and looks for the newest published VRCL Client release with its matching:
+
+`VRCL_Client_<version>.zip`
+
+It then downloads that release package rather than relying on an old bundled client copy.
+
+### 3. Choose where VRCL Client goes
+
+The installer lets you choose the folder for the VRCL Client main files.
+
+A typical folder name is:
+
+`VRCL Client - VRC Client v1.0.0 - (main files)`
+
+The installer preserves the user's `Data/` directory when updating an existing installation.
+
+### 4. Launch VRCL Client
+
+After installation, start:
+
+`VRCL Client.exe`
+
+You can use the desktop shortcut if the installer/build provides one.
+
+### 5. First setup
+
+On first launch, use VRCL Client's setup/settings areas to detect and configure the parts of your PCVR setup that you want VRCL Client to manage.
+
+Depending on your hardware and software, this can include:
+
+- Steam
+- SteamVR
+- VRChat
+- Meta / Quest PCVR
+- Oculus Startup System (OSS)
+- Keybinds and launch preferences
+
+---
+
+## 🐺 What is VRCL Client?
+
+VRCL Client is designed to be a single Windows launch hub for a VRChat PCVR setup.
+
+It brings together:
+
+- VRChat launching
+- Steam and SteamVR handling
+- Meta/Quest PCVR options
+- PC/setup detection
+- Settings and keybinds
+- Tray controls
+- Themes and backgrounds
+- GitHub update checking
+
+The goal is simple: **install it, set it up, and use VRCL Client as your everyday VRChat launch hub.**
+
+---
+
+## 🔄 Updates
+
+VRCL Client uses GitHub Releases for its application updates.
+
+The intended flow is:
+
+**GitHub Release → VRCL Client checks for an update → VRCL Updater downloads the release package → application files are replaced → protected user data remains intact → VRCL Client starts again**
+
+The updater is designed to replace application files without treating the user's personal data as part of the update payload.
+
+### Protected data
+
+The `Data/` directory is treated as protected user data.
+
+Release packages should not contain replacement `Data/` content, and the updater is designed to prevent update manifests from deleting that directory.
+
+---
+
+## 🧰 VRCL Installer
+
+The installer is a separate application from VRCL Client.
+
+**Current installer build:** `v1.0.0-release-beta`
+
+The installer is intended to:
+
+- Check GitHub Releases every time it starts
+- Find the newest published release with a matching client ZIP
+- Download the matching client package
+- Verify the GitHub SHA-256 digest when available
+- Ask where to install the VRCL Client main-files folder
+- Install the selected release
+- Preserve existing `Data/` content
+- Let the user launch VRCL Client after installation
+
+The installer is **not** the main VRCL Client. Its job is to obtain and install the latest released client.
+
+---
+
+## 🎮 Main Features
+
+### VRChat Launching
+
 Launch your VR setup from one application with support for:
 
 - Steam
@@ -41,128 +150,81 @@ Launch your VR setup from one application with support for:
 - Meta / Quest PCVR workflows
 - First-run PC detection and setup
 
-### 🥽 Oculus Startup System
-The optional **Oculus Startup System (OSS)** is designed for Meta/Quest PCVR users who want the required Oculus/Meta startup flow handled before SteamVR and VRChat are launched.
+### Oculus Startup System
 
-OSS is intended to detect relevant Meta/Oculus components locally and provide the appropriate setup guidance when needed.
+The optional **Oculus Startup System (OSS)** is intended for Meta/Quest PCVR users who want the required Meta/Oculus startup flow handled before SteamVR and VRChat.
 
-### ⚙️ Settings & Controls
+### Settings & Controls
 
-VRCL Client includes a centralized settings experience with:
+VRCL Client includes a centralized settings experience for:
 
 - Keybinds
 - Tray controls
 - Launch preferences
 - PC/VR setup detection
 - Command output
-- Portable application behavior
 - Theme and background support
 
-### 🎨 Themes & Visuals
+### Themes
 
-The client supports custom visual themes and backgrounds.
+VRCL Client supports custom visual themes and backgrounds.
 
-Theme packages are being designed so they can be delivered separately through the update system instead of requiring every future full application package to permanently contain every theme.
-
-**Crystal Shards** is planned as one of the future theme packages.
+**Crystal Shards** is planned as a separate theme package so future themes do not have to be permanently baked into every full application release.
 
 ---
 
-## 🔄 Updates Without Manual Builds
+## 📦 Releases
 
-> **You do not need to build VRCL Client yourself to use a released version.**
+GitHub Releases are the distribution point for finished VRCL Client builds.
 
-VRCL Client releases are intended to provide **pre-built Windows files** ready for normal users.
+A full client release uses:
 
-When a new full beta is published on GitHub, the release package can contain the complete pre-built application for that version. The application also contains its own update-checking foundation so it can check the project's GitHub releases for newer beta versions.
+`v<version>`
 
-The intended update flow is:
+and its matching package uses:
 
-**GitHub Release → VRCL Client detects update → updater obtains the release package → application files are replaced → user data remains protected → VRCL Client launches again**
+`VRCL_Client_<version>.zip`
 
-The updater is designed around replacing application files rather than treating the user's personal configuration as disposable.
-
-### 📦 Protected User Data
-
-VRCL Client keeps user data in a separate:
-
-`Data/`
-
-directory.
-
-The planned updater architecture is specifically designed to avoid deleting or overwriting that user data when application files are updated.
-
----
-
-## 🧰 Installer
-
-The **VRCL Installer** is a separate application from the main VRCL Client.
-
-### Current installer: v1.0.0-release-beta
-
-The installer checks the project's published GitHub Releases **every time it starts**. It does not rely on an old bundled VRCL Client version.
-
-The installer is intended to:
-
-- Find the newest published release with a matching `VRCL_Client_<version>.zip`
-- Download the matching release package
-- Verify its SHA-256 digest when GitHub provides one
-- Ask where the VRCL Client main-files folder should be installed
-- Install the selected release
-- Preserve the user's `Data/` directory
-- Allow the user to launch VRCL Client after installation
-
-Use **Download VRCL Client Installer** at the top of this page to obtain the installer once its release asset has been published.
-
----
-
-## 📦 How Releases Work
-
-VRCL Client uses GitHub Releases as the distribution point for finished beta builds.
-
-A full beta release is intended to contain the **pre-built application package** for that version.
-
-Example:
+For example:
 
 `v1.0.0-release-beta`
 
-with a package such as:
+with:
 
 `VRCL_Client_1.0.0-release-beta.zip`
 
-The standalone installer is distributed as `VRCL.Installer.exe`. The installer then retrieves the matching/latest client package from GitHub Releases instead of shipping a permanently bundled client copy.
+The standalone installer is:
+
+`VRCL.Installer.exe`
+
+The installer retrieves the client package from GitHub Releases when it runs.
 
 ### Release channels
 
 | Channel | Purpose |
 |---|---|
-| **Beta** | Active development builds published for testing and early use |
+| **Beta** | Development/testing builds |
 | **Stable** | Future production-ready releases |
 
 ---
----
 
-## 📥 Getting VRCL Client
+## 🛠️ For Developers
 
-### Recommended
+Normal users should use the installer and published releases.
 
-Use the **Download VRCL Client Installer** button at the top of this page to obtain the installer. The installer checks GitHub for the latest published VRCL Client release when it starts.
+Developers who want to build VRCL Client from source can use the repository's Windows/.NET build files. The source tree is separate from the pre-built release packages.
 
-### Releases
-
-All published builds and release packages are available through the project's GitHub Releases page.
-
-**Each full beta is intended to be a ready-to-use pre-built version.**
+The project currently targets **.NET 10 / Windows x64**.
 
 ---
 
-## 🚧 Development Status
+## 📌 Important
 
-VRCL Client is actively being developed.
-
-Current development includes the core launcher, setup flow, settings, themes, GitHub update checking, and the foundation for the standalone installer/updater system.
-
-The release and update infrastructure is being built so future versions can be distributed cleanly without requiring users to open the source code or compile anything themselves.
+- VRCL Client is a Windows application.
+- The installer requires an internet connection to retrieve the latest published client release.
+- Do not delete the `Data/` directory if you want to preserve your VRCL Client data.
+- Do not manually mix files from different VRCL Client releases.
+- Use the installer for a new installation and VRCL's updater for supported in-app updates.
 
 ---
 
