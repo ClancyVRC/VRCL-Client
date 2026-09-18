@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using System.IO.Compression;
 using System.Net.Http.Headers;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace VRCLUpdater;
@@ -89,17 +91,33 @@ internal sealed class UpdaterForm : Form
                 var extract = Path.Combine(work, "extract");
                 SetStatus("Downloading update…", opt.Version);
                 await DownloadAsync(uri, zip, cts.Token);
+                if (!string.IsNullOrWhiteSpace(opt.Sha256))
+                {
+                    SetStatus("Verifying update package…", "Checking release checksum");
+                    var actual = await ComputeSha256Async(zip, cts.Token);
+                    if (!string.Equals(actual, opt.Sha256, StringComparison.OrdinalIgnoreCase))
+                        throw new InvalidDataException("The downloaded update failed its SHA-256 checksum.");
+                }
+                else
+                {
+                    SetStatus("Verifying update package…", "Checking ZIP structure");
+                }
 
-                SetStatus("Verifying update package…", "Checking ZIP structure");
                 ZipFile.ExtractToDirectory(zip, extract, overwriteFiles: false);
                 var payload = FindPayloadRoot(extract, opt.Version);
                 ValidatePayload(payload);
 
                 SetStatus("Installing update…", "Preserving your Data folder");
                 progress.Style = ProgressBarStyle.Marquee;
-                await Task.Run(() => ApplyPayload(payload, target), cts.Token);
+                var selfUpdate = await Task.Run(() => ApplyPayload(payload, target), cts.Token);
                 progress.Style = ProgressBarStyle.Continuous;
                 progress.Value = 100;
+
+                if (selfUpdate is not null)
+                {
+                    await ScheduleSelfUpdate(selfUpdate, target);
+                    return;
+                }
 
                 SetStatus("Update complete.", string.IsNullOrWhiteSpace(opt.Version) ? "Starting VRCL Client…" : $"VRCL Client {opt.Version} is ready.");
                 await Task.Delay(500);
@@ -170,8 +188,9 @@ internal sealed class UpdaterForm : Form
             throw new InvalidDataException("VRCL Updater.exe is missing from the update payload.");
     }
 
-    static void ApplyPayload(string payload, string target)
+    static string? ApplyPayload(string payload, string target)
     {
+        string? stagedUpdater = null;
         foreach (var dir in Directory.EnumerateDirectories(payload, "*", SearchOption.AllDirectories))
         {
             var rel = Path.GetRelativePath(payload, dir);
@@ -179,16 +198,66 @@ internal sealed class UpdaterForm : Form
                 rel.StartsWith("Data" + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase)) continue;
             Directory.CreateDirectory(Path.Combine(target, rel));
         }
+
         foreach (var file in Directory.EnumerateFiles(payload, "*", SearchOption.AllDirectories))
         {
             var rel = Path.GetRelativePath(payload, file);
             if (rel.Equals("Data", StringComparison.OrdinalIgnoreCase) ||
                 rel.StartsWith("Data" + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase)) continue;
+
             var destination = Path.Combine(target, rel);
             Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+
+            if (string.Equals(Path.GetFileName(destination), "VRCL Updater.exe", StringComparison.OrdinalIgnoreCase))
+            {
+                stagedUpdater = Path.Combine(Path.GetTempPath(), "VRCL-Updater", Guid.NewGuid().ToString("N") + ".exe");
+                Directory.CreateDirectory(Path.GetDirectoryName(stagedUpdater)!);
+                File.Copy(file, stagedUpdater, overwrite: true);
+                continue;
+            }
+
             File.SetAttributes(destination, FileAttributes.Normal);
             File.Copy(file, destination, overwrite: true);
         }
+
+        return stagedUpdater;
+    }
+
+    async Task ScheduleSelfUpdate(string stagedUpdater, string target)
+    {
+        var updater = Path.Combine(target, "VRCL Updater.exe");
+        var client = Path.Combine(target, "VRCL Client.exe");
+        var pid = Environment.ProcessId;
+        var script = Path.Combine(Path.GetTempPath(), $"VRCL_Updater_SelfUpdate_{pid}.ps1");
+        var qScript = script.Replace("'", "''");
+        var qUpdater = updater.Replace("'", "''");
+        var qStaged = stagedUpdater.Replace("'", "''");
+        var qClient = client.Replace("'", "''");
+        var qTarget = target.Replace("'", "''");
+        var body = $"$pid={pid}; $deadline=(Get-Date).AddSeconds(60); while(Get-Process -Id $pid -ErrorAction SilentlyContinue -and (Get-Date) -lt $deadline) {{ Start-Sleep -Milliseconds 250 }}; Move-Item -LiteralPath '{qStaged}' -Destination '{qUpdater}' -Force; Start-Process -FilePath '{qClient}' -WorkingDirectory '{qTarget}'; Remove-Item -LiteralPath '{qScript}' -Force -ErrorAction SilentlyContinue";
+
+        File.WriteAllText(script, body, Encoding.UTF8);
+        SetStatus("Finishing update…", "Refreshing the bundled updater and restarting VRCL Client.");
+
+        var psi = new ProcessStartInfo(
+            "powershell.exe",
+            $"-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"{script}\"")
+        {
+            UseShellExecute = false,
+            CreateNoWindow = true,
+            WorkingDirectory = target
+        };
+
+        Process.Start(psi);
+        await Task.Delay(250);
+        Close();
+    }
+
+    static async Task<string> ComputeSha256Async(string file, CancellationToken token)
+    {
+        await using var stream = File.OpenRead(file);
+        var hash = await SHA256.HashDataAsync(stream, token);
+        return Convert.ToHexString(hash);
     }
 
     static async Task WaitForProcessExitAsync(int pid, TimeSpan timeout)
@@ -200,7 +269,8 @@ internal sealed class UpdaterForm : Form
             var sw = Stopwatch.StartNew();
             while (!process.HasExited)
             {
-                if (sw.Elapsed > timeout) throw new TimeoutException("VRCL Client did not close within the update timeout.");
+                if (sw.Elapsed > timeout)
+                    throw new TimeoutException("VRCL Client did not close within the update timeout.");
                 await Task.Delay(250);
             }
         }
@@ -238,6 +308,7 @@ internal sealed class UpdaterForm : Form
             else if (a.Equals("--version", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length) o.Version = args[++i];
             else if (a.Equals("--target", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length) o.TargetDirectory = args[++i];
             else if (a.Equals("--pid", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length && int.TryParse(args[++i], out var pid)) o.ProcessId = pid;
+            else if (a.Equals("--sha256", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length) o.Sha256 = (args[++i] ?? "").Replace("sha256:", "", StringComparison.OrdinalIgnoreCase).Trim();
         }
         return o;
     }
@@ -253,5 +324,6 @@ internal sealed class UpdaterForm : Form
         public string Version { get; set; } = "";
         public string TargetDirectory { get; set; } = "";
         public int ProcessId { get; set; }
+        public string Sha256 { get; set; } = "";
     }
 }
