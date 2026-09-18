@@ -11,6 +11,5 @@
     <PublishSingleFile>true</PublishSingleFile>
     <AssemblyName>VRCL Updater</AssemblyName>
     <RootNamespace>VRCLUpdater</RootNamespace>
-    <ApplicationIcon>..\VRCL Client\vrcl_shell.ico</ApplicationIcon>
   </PropertyGroup>
 </Project>
