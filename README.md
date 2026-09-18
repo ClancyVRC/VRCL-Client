@@ -16,13 +16,6 @@
   </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/ClancyVRC/VRCL-Client/releases"><img src="https://img.shields.io/github/v/release/ClancyVRC/VRCL-Client?include_prereleases&label=Latest%20Beta" alt="Latest Beta"></a>
-  <img src="https://img.shields.io/badge/Windows-x64-2ea44f" alt="Windows x64">
-  <img src="https://img.shields.io/badge/.NET-10-512bd4" alt=".NET 10">
-  <img src="https://img.shields.io/badge/WPF-Desktop-0078d4" alt="WPF Desktop">
-</p>
-
 ---
 
 ## What is VRCL Client?
