@@ -16,6 +16,10 @@
   </a>
 </p>
 
+<p align="center">
+  <strong>Current installer build: v1.0.0-release-beta</strong>
+</p>
+
 ---
 
 ## What is VRCL Client?
@@ -94,16 +98,21 @@ The planned updater architecture is specifically designed to avoid deleting or o
 
 The **VRCL Installer** is a separate application from the main VRCL Client.
 
-Its job is to handle installation/update operations using the pre-built files published through the project's GitHub Releases.
+### Current installer: v1.0.0-release-beta
 
-The intended installer architecture allows the installer to:
+The installer checks the project's published GitHub Releases **every time it starts**. It does not rely on an old bundled VRCL Client version.
 
-- Obtain the appropriate release files from GitHub
-- Install VRCL Client into its application directory
-- Replace/update its own installed files when a newer installer is published
-- Keep the main application and installer responsibilities separate
+The installer is intended to:
 
-**Installer downloads are provided from the GitHub Releases system rather than requiring users to manually build the project.**
+- Find the newest published release with a matching `VRCL_Client_<version>.zip`
+- Download the matching release package
+- Verify its SHA-256 digest when GitHub provides one
+- Ask where the VRCL Client main-files folder should be installed
+- Install the selected release
+- Preserve the user's `Data/` directory
+- Allow the user to launch VRCL Client after installation
+
+Use **Download VRCL Client Installer** at the top of this page to obtain the installer once its release asset has been published.
 
 ---
 
@@ -115,13 +124,13 @@ A full beta release is intended to contain the **pre-built application package**
 
 Example:
 
-`v1.9.95-beta`
+`v1.0.0-release-beta`
 
 with a package such as:
 
-`VRCL_Client_1.9.95-beta.zip`
+`VRCL_Client_1.0.0-release-beta.zip`
 
-Future releases can also contain the standalone installer and other release components as the distribution system is expanded.
+The standalone installer is distributed as `VRCL.Installer.exe`. The installer then retrieves the matching/latest client package from GitHub Releases instead of shipping a permanently bundled client copy.
 
 ### Release channels
 
@@ -137,7 +146,7 @@ Future releases can also contain the standalone installer and other release comp
 
 ### Recommended
 
-Use the installer button at the top of this page to obtain the latest available installer.
+Use the **Download VRCL Client Installer** button at the top of this page to obtain the installer. The installer checks GitHub for the latest published VRCL Client release when it starts.
 
 ### Releases
 
