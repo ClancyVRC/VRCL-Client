@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "release_tag": "v{version}",
+  "client_package": "VRCL_Client_{version}.zip",
+  "client_package_root": "VRCL_Client_{version}/VRCL Client/",
+  "required_release_assets": [
+    "VRCL_Client_{version}.zip"
+  ],
+  "future_release_assets": [
+    "VRCL.Installer.exe",
+    "VRCL Updater.exe"
+  ],
+  "protected_directory": "Data/",
+  "notes": "GitHub repository: ClancyVRC/VRCL-Client"
+}
