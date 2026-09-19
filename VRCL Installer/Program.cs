@@ -65,12 +65,32 @@ internal static class Program
             Controls.Add(root);
 
             var header = new Panel { Dock = DockStyle.Fill };
-            var title = new Label { Text = "VRCL Client", Font = new Font("Segoe UI Semibold", 25F), AutoSize = true, Location = new Point(0, 2) };
+
+            var logo = new PictureBox {
+                Location = new Point(0, 4),
+                Size = new Size(64, 64),
+                SizeMode = PictureBoxSizeMode.Zoom,
+                BackColor = Color.Transparent
+            };
+            try {
+                var logoPath = Path.Combine(AppContext.BaseDirectory, "vrcl_installer_logo.png");
+                if (File.Exists(logoPath))
+                    logo.Image = Image.FromFile(logoPath);
+            }
+            catch { }
+
+            var title = new Label {
+                Text = "VRCL Client",
+                Font = new Font("Segoe UI Semibold", 25F),
+                AutoSize = true,
+                Location = new Point(78, 2)
+            };
+            header.Controls.Add(logo);
             header.Controls.Add(title);
             header.Controls.Add(new Label {
                 Text = "Installer • always installs the newest published GitHub release",
                 Font = new Font("Segoe UI", 10F), ForeColor = Color.FromArgb(175, 182, 196),
-                AutoSize = true, Location = new Point(2, 48)
+                AutoSize = true, Location = new Point(80, 48)
             });
             root.Controls.Add(header, 0, 0);
 
