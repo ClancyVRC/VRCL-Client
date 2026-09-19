@@ -1,13 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "release": "v1.0.0-release-beta",
   "installer_asset": "VRCL.Installer.exe",
   "client_asset": "VRCL_Client_1.0.0-release-beta.zip",
   "installer_package": "VRCL Installer",
-  "installer_build_package_source": "VRCL Installer(1).zip",
-  "notes": [
-    "The compiled installer build is preserved as supplied.",
-    "This repository documentation does not replace or modify the compiled installer.",
-    "Installer source files are not included in this build package."
-  ]
+  "build_script": "BUILD_FIXED_INSTALLER.cmd",
+  "branding_script": "PREPARE_INSTALLER_BRANDING.ps1",
+  "release_workflow": ".github/workflows/release-installer.yml",
+  "signing": {
+    "provider": "Microsoft Artifact Signing",
+    "public_release": true,
+    "timestamp": "http://timestamp.acs.microsoft.com"
+  }
 }
