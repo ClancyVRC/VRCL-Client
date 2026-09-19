@@ -118,6 +118,16 @@ If you just want to use VRCL Client, download the installer above. You do not ne
 
 ---
 
+## 📄 Project Information
+
+<p align="center">
+  <a href="PRIVACY.md">🔒 Privacy Statement</a>
+  &nbsp;•&nbsp;
+  <a href="LICENSE.md">📜 License</a>
+</p>
+
+---
+
 <p align="center">
   <strong>VRCL Client</strong><br>
   Simple VRChat PCVR launching.
