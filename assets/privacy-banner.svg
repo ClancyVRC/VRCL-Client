@@ -1,14 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 300" role="img" aria-labelledby="title desc">
-<title id="title">VRCL Client Privacy Statement</title><desc id="desc">Stylized VRCL Client Privacy Statement banner</desc>
+<title id="title">VRCL Client Privacy Statement</title><desc id="desc">Colorful VRCL Client Privacy Statement banner</desc>
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#09111d"/><stop offset=".52" stop-color="#122b49"/><stop offset="1" stop-color="#17639a"/></linearGradient>
- <radialGradient id="glow"><stop stop-color="#61c4ff" stop-opacity=".34"/><stop offset="1" stop-color="#61c4ff" stop-opacity="0"/></radialGradient>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050b14"/><stop offset=".42" stop-color="#082847"/><stop offset=".76" stop-color="#0876b5"/><stop offset="1" stop-color="#20b8e8"/></linearGradient>
+ <radialGradient id="cyan"><stop stop-color="#66e5ff" stop-opacity=".68"/><stop offset="1" stop-color="#66e5ff" stop-opacity="0"/></radialGradient>
+ <radialGradient id="blue"><stop stop-color="#4f8cff" stop-opacity=".4"/><stop offset="1" stop-color="#4f8cff" stop-opacity="0"/></radialGradient>
+ <linearGradient id="text"><stop stop-color="#fff"/><stop offset="1" stop-color="#d7f6ff"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
 </defs>
 <rect width="1400" height="300" rx="32" fill="url(#bg)"/>
-<circle cx="1180" cy="40" r="230" fill="url(#glow)"/>
-<path d="M90 70h260 M1050 70h260" stroke="#65c4ff" stroke-width="4" stroke-linecap="round"/>
-<path d="M90 224h1220" stroke="#75caff" stroke-opacity=".28" stroke-width="2"/>
-<text x="700" y="132" text-anchor="middle" fill="#fff" font-family="Segoe UI,Arial,sans-serif" font-size="68" font-weight="800" letter-spacing="4">VRCL CLIENT</text>
-<text x="700" y="184" text-anchor="middle" fill="#ccecff" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="600" letter-spacing="7">PRIVACY STATEMENT</text>
-<text x="700" y="256" text-anchor="middle" fill="#9fdcff" font-family="Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="4">LOCAL • PRIVATE • TRANSPARENT</text>
+<circle cx="1170" cy="45" r="235" fill="url(#cyan)" filter="url(#blur)"/>
+<circle cx="240" cy="280" r="190" fill="url(#blue)" filter="url(#blur)"/>
+<rect x="82" y="58" width="1236" height="184" rx="26" fill="#03101b" opacity=".24" stroke="#a7edff" stroke-opacity=".32"/>
+<rect x="102" y="78" width="5" height="144" rx="2.5" fill="#62e8ff"/>
+<rect x="1293" y="78" width="5" height="144" rx="2.5" fill="#4b9cff"/>
+<text x="700" y="130" text-anchor="middle" fill="url(#text)" font-family="Segoe UI,Arial,sans-serif" font-size="68" font-weight="800" letter-spacing="5">VRCL CLIENT</text>
+<text x="700" y="184" text-anchor="middle" fill="#d8f7ff" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="700" letter-spacing="8">PRIVACY STATEMENT</text>
+<rect x="535" y="211" width="330" height="32" rx="16" fill="#20b8e8" fill-opacity=".18" stroke="#b8f3ff" stroke-opacity=".5"/>
+<text x="700" y="232" text-anchor="middle" fill="#d9f8ff" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">LOCAL • PRIVATE • TRANSPARENT</text>
 </svg>
