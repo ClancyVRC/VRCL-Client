@@ -1,32 +1,42 @@
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$logoSource = Join-Path $projectRoot "..\assets\vrcl-app-icon.webp"
-$cachedLogo = Join-Path $projectRoot "vrcl-app-icon.webp"
-$logoPng = Join-Path $projectRoot "vrcl_installer_logo.png"
-$iconFile = Join-Path $projectRoot "vrcl_installer.ico"
-$logoUrl = "https://raw.githubusercontent.com/ClancyVRC/VRCL-Client/main/assets/vrcl-app-icon.webp"
+$repoRoot = Split-Path -Parent $projectRoot
+$svgPath = Join-Path $repoRoot "assets\vrcl-logo.svg"
+$iconPath = Join-Path $projectRoot "vrcl_installer.ico"
 
-if (-not (Test-Path -LiteralPath $logoSource)) {
-    if (-not (Test-Path -LiteralPath $cachedLogo)) {
-        Write-Host "Downloading the current VRCL logo..."
-        Invoke-WebRequest -Uri $logoUrl -OutFile $cachedLogo -UseBasicParsing
-    }
-    $logoSource = $cachedLogo
+if (-not (Test-Path -LiteralPath $svgPath)) {
+    throw "VRCL logo source not found: $svgPath"
 }
 
-$magick = Get-Command magick -ErrorAction SilentlyContinue
-if (-not $magick) {
-    throw "ImageMagick (magick.exe) is required to prepare the VRCL installer icon. Install ImageMagick, then run the installer build again."
+# The official VRCL SVG contains the 96x96 PNG wolf logo as an embedded
+# base64 image. Extract that PNG and wrap it in a standard ICO container.
+$svg = Get-Content -LiteralPath $svgPath -Raw
+$match = [regex]::Match($svg, 'data:image/png;base64,([^"''>]+)')
+if (-not $match.Success) {
+    throw "Could not find the embedded VRCL PNG inside vrcl-logo.svg."
 }
 
-Write-Host "Preparing VRCL installer branding..."
-& $magick.Source $logoSource -background none -alpha on -resize "256x256" $logoPng
-if ($LASTEXITCODE -ne 0) { throw "ImageMagick failed while creating vrcl_installer_logo.png." }
+$png = [Convert]::FromBase64String($match.Groups[1].Value)
 
-& $magick.Source $logoPng -background none -define "icon:auto-resize=256,128,96,64,48,32,16" $iconFile
-if ($LASTEXITCODE -ne 0) { throw "ImageMagick failed while creating vrcl_installer.ico." }
+# ICO header: reserved=0, type=1 (icon), count=1.
+$bytes = [System.Collections.Generic.List[byte]]::new()
+$bytes.AddRange([BitConverter]::GetBytes([UInt16]0))
+$bytes.AddRange([BitConverter]::GetBytes([UInt16]1))
+$bytes.AddRange([BitConverter]::GetBytes([UInt16]1))
 
-Write-Host "Installer logo ready:"
-Write-Host "  $logoPng"
-Write-Host "  $iconFile"
+# One 96x96 PNG-backed icon entry.
+$bytes.Add([byte]96)
+$bytes.Add([byte]96)
+$bytes.Add([byte]0)
+$bytes.Add([byte]0)
+$bytes.AddRange([BitConverter]::GetBytes([UInt16]1))
+$bytes.AddRange([BitConverter]::GetBytes([UInt16]32))
+$bytes.AddRange([BitConverter]::GetBytes([UInt32]$png.Length))
+$bytes.AddRange([BitConverter]::GetBytes([UInt32]22))
+$bytes.AddRange($png)
+
+[IO.File]::WriteAllBytes($iconPath, $bytes.ToArray())
+
+Write-Host "VRCL installer icon prepared:"
+Write-Host "  $iconPath"
