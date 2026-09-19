@@ -20,7 +20,7 @@
 
 ## 🐺 What is VRCL Client?
 
-**VRCL** stands for **VRChat Launcher**.
+**VRCL** stands for **"VRChat Launcher"**.
 
 VRCL Client is a Windows app made to make starting and managing VRChat PCVR a little easier.
 
