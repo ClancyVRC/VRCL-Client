@@ -12,8 +12,10 @@
 
 <p align="center">
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
-    <strong>⬇️ DOWNLOAD VRCL CLIENT</strong>
+    <strong>⬇️ DOWNLOAD INSTALLER</strong>
   </a>
+  <br>
+  <sub>VRCL.Installer.exe · Windows x64</sub>
 </p>
 
 ---
