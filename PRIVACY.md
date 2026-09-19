@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/privacy-banner.svg" width="100%" alt="VRCL Client Privacy Statement banner">
+</p>
+
 # VRCL Client Privacy Statement
 
 **Effective date:** September 19, 2026
