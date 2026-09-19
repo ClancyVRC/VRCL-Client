@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "release": "v1.0.0-release-beta",
+  "installer_asset": "VRCL.Installer.exe",
+  "client_asset": "VRCL_Client_1.0.0-release-beta.zip",
+  "installer_package": "VRCL Installer",
+  "installer_build_package_source": "VRCL Installer(1).zip",
+  "notes": [
+    "The compiled installer build is preserved as supplied.",
+    "This repository documentation does not replace or modify the compiled installer.",
+    "Installer source files are not included in this build package."
+  ]
+}
