@@ -14,7 +14,7 @@
 
     <!-- Reuse the exact main VRCL Client icon so the standalone installer EXE
          keeps the same wolf icon as the main app. -->
-    <ApplicationIcon>..\VRCL Client\vrcl_shell.ico</ApplicationIcon>
+    <ApplicationIcon>vrcl_installer.ico</ApplicationIcon>
 
     <AssemblyName>VRCL.Installer</AssemblyName>
     <RootNamespace>VRCLInstaller</RootNamespace>
