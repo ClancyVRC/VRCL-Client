@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" role="img" aria-labelledby="title desc">
+  <title id="title">VRCL Client License</title>
+  <desc id="desc">VRCL Client license information</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#171022"/><stop offset="1" stop-color="#432078"/></linearGradient></defs>
+  <rect width="1200" height="210" rx="26" fill="url(#bg)"/>
+  <path d="M70 160H1130" stroke="#a77cff" stroke-width="2" opacity=".7"/>
+  <text x="600" y="100" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">VRCL CLIENT</text>
+  <text x="600" y="143" text-anchor="middle" fill="#d9c8ff" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="4">LICENSE</text>
+</svg>
