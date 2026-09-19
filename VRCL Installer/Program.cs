@@ -86,7 +86,7 @@ internal static class Program
                 AutoSize = false, Location = new Point(18, 38), Size = new Size(720, 100),
                 ForeColor = Color.FromArgb(205, 211, 222),
                 Text = "VRCL Installer checks GitHub every time it starts and installs the newest published VRCL Client package it can find.\r\n\r\n" +
-                       "The selected location is the parent folder. The installer creates a VRCL Client folder inside it. Existing Data/settings are preserved.\r\n\r\n" +
+                       "The selected location is the VRCL Client installation folder. Existing Data/settings are preserved.\r\n\r\n" +
                        "Repository: github.com/ClancyVRC/VRCL-Client"
             });
             root.Controls.Add(readme, 0, 2);
