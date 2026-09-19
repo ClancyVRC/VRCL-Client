@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/latest/download/VRCL.Installer.exe">
+  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
     <strong>⬇️ DOWNLOAD VRCL CLIENT INSTALLER</strong>
   </a>
 </p>
@@ -176,6 +176,16 @@ VRCL Client supports custom visual themes and backgrounds.
 ## 📦 Releases
 
 GitHub Releases are the distribution point for finished VRCL Client builds.
+
+### Current release
+
+**VRCL Client v1.0.0-release-beta** is the current public beta release.
+
+- [Release page](https://github.com/ClancyVRC/VRCL-Client/releases/tag/v1.0.0-release-beta)
+- [Download VRCL.Installer.exe](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe)
+- [Download VRCL_Client_1.0.0-release-beta.zip](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL_Client_1.0.0-release-beta.zip)
+
+The beta release is marked as a pre-release on GitHub. Future stable releases can use the repository's standard latest-release download link once a stable release is published.
 
 A full client release uses:
 
