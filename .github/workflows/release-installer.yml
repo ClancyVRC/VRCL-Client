@@ -40,11 +40,6 @@ jobs:
         with:
           dotnet-version: "10.0.x"
 
-      - name: Prepare installer logo and icon
-        shell: pwsh
-        run: |
-          & "$env:GITHUB_WORKSPACE\VRCL Installer\PREPARE_INSTALLER_BRANDING.ps1"
-
       - name: Publish installer
         shell: pwsh
         run: |
