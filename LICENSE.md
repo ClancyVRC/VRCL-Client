@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/license-banner.svg" width="100%" alt="VRCL Client License banner">
+</p>
+
 # VRCL Client License
 
 **Copyright © 2026 ClancyVRC. All rights reserved.**
