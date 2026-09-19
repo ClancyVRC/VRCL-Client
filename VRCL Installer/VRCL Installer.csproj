@@ -11,10 +11,15 @@
     <PublishSingleFile>true</PublishSingleFile>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <ApplicationIcon>vrcl_installer.ico</ApplicationIcon>
     <AssemblyName>VRCL.Installer</AssemblyName>
     <RootNamespace>VRCLInstaller</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="wolf_logo.png" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="vrcl_installer.ico" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="vrcl_installer_logo.png" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
+  <Target Name="PrepareInstallerBranding" BeforeTargets="PrepareForBuild">
+    <Exec Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\PREPARE_INSTALLER_BRANDING.ps1&quot;" />
+  </Target>
 </Project>
