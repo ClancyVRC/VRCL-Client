@@ -15,7 +15,7 @@
     }
   },
   "latest_release_api": "https://api.github.com/repos/ClancyVRC/VRCL-Client/releases/latest",
-  "release_list_api": "https://api.github.com/repos/ClancyVRC/VRCL-Client/releases?per_page=30",
+  "release_list_api": "https://api.github.com/repos/ClancyVRC/VRCL-Client/releases?per_page=100",
   "release_tag_pattern": "v{version}",
   "installer_asset_name": "VRCL.Installer.exe",
   "updater_asset_name": "VRCL Updater.exe",
