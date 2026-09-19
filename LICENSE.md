@@ -1,209 +1,179 @@
-# VRCL Client Software License Agreement (SLA)
+# VRCL Client License
 
-**Effective as of September 19, 2026**
+**Copyright © 2026 ClancyVRC. All rights reserved.**
 
-> **IMPORTANT**
->
-> This Software License Agreement (the "Agreement") is a custom, source-available proprietary license governing VRCL Client. It is **not an Open Source Initiative (OSI) approved license**.
->
-> This Agreement permits public access to the VRCL Client source code and grants limited rights to use, modify, and distribute the Software, subject to the restrictions and requirements below.
+**Effective:** September 19, 2026
 
-## 1. Definitions
+## About This License
 
-**Software:** The VRCL Client software, including its source code, compiled application, installer, updater, build scripts, configuration, documentation, and original project materials.
+VRCL Client is a **source-available proprietary project**. The source code is publicly available so users and developers can inspect, learn from, modify, and develop the project within the rights granted by this license.
 
-**Licensor:** ClancyVRC, the creator and copyright holder of VRCL Client.
+This license is **not an OSI-approved open-source license**.
 
-**Licensee:** Any individual or entity using, copying, modifying, or distributing the Software under this Agreement.
+The goal of this license is to allow reasonable personal and development use while protecting the identity of the official VRCL Client project and its official releases.
 
-**Official Build:** A VRCL Client build or installer published by the Licensor through the official VRCL Client repository or its official GitHub releases.
+## Using VRCL Client
 
-**Fork/Derivative Work:** Any software, project, or build derived from or containing portions of VRCL Client.
+You may:
 
-**Official Branding:** The VRCL Client name, VRCL branding, wolf logo/artwork, installer branding, icons, and other original visual or identifying materials belonging to the VRCL Client project.
-
-## 2. Grant of License
-
-Subject to full compliance with this Agreement, the Licensor grants the Licensee a worldwide, royalty-free, non-exclusive license to:
-
-- Use the Software for personal purposes.
-- Download and run Official Builds.
+- Download and use official VRCL Client releases.
+- Run VRCL Client on your own Windows PC.
 - Inspect the publicly available source code.
-- Modify the Software for personal or development purposes.
-- Create Forks or Derivative Works subject to this Agreement.
-- Share links to the official VRCL Client repository and Official Builds.
+- Modify the source code for personal use, development, and testing.
+- Create personal or development forks.
+- Share links to the official VRCL Client repository and official releases.
 
-No rights beyond those expressly granted in this Agreement are provided.
+You may not use VRCL Client in a way that violates applicable law or this license.
 
-## 3. Permitted Use and Modification
+## Modifying VRCL Client
 
-Licensees may modify VRCL Client, including its UI, settings, launcher behavior, themes, backgrounds, build configuration, and other components, provided the resulting work complies with this Agreement.
+You are allowed to modify VRCL Client and create derivative versions.
 
-Modifications must not:
+Modifications may include changes to:
 
-- Intentionally misrepresent an unofficial build as an Official Build.
-- Remove or obscure required copyright or license notices.
-- Use Official Branding in a way that falsely implies official authorization.
-- Claim that the Licensor created, approved, or supports a modified build when that is not the case.
-- Be distributed in a manner that violates applicable law.
+- The user interface
+- Themes and backgrounds
+- Settings
+- Launch behavior
+- Keybinds
+- Features
+- Build configuration
+- Other parts of the source code
 
-## 4. Official Builds, Installer, and Release System
+A modified version must not be presented as an official VRCL Client release unless it has been published or authorized by ClancyVRC.
 
-The official VRCL Client distribution may include a prebuilt Windows x64 application and the official VRCL Installer.
+If you distribute a modified version, it should be clearly identified as **modified**, **unofficial**, or otherwise distinguishable from the official VRCL Client release.
 
-The official installer may:
+## Official VRCL Builds and Branding
 
-- Check the official GitHub Releases for the newest compatible VRCL Client package.
-- Download an official VRCL Client release package.
-- Verify a provided package checksum when available.
-- Install VRCL Client to a location selected by the user.
-- Preserve the user's VRCL `Data/` folder and settings during supported updates.
+The following identify the official VRCL Client project:
 
-The installer, updater, release packages, and build configuration may change between versions.
+- The **VRCL Client** name
+- The VRCL wolf logo and original artwork
+- Official application and installer icons
+- Official installer branding
+- Official release packages
+- Official release documentation and other original project branding
 
-A modified installer or release package must not be presented as the official VRCL Installer unless it is published or expressly authorized by the Licensor.
+These materials may not be used to falsely suggest that an unofficial build is an official VRCL release or that ClancyVRC endorses a modification when no such authorization exists.
 
-## 5. VRCL Client Data and Privacy
+The existence of a fork does not grant ownership of the VRCL Client name, logo, artwork, or official branding.
 
-VRCL Client is designed to operate primarily on the user's Windows PC.
+## Sharing and Forking
 
-The project does not intentionally collect, sell, rent, or distribute users' personal data.
+You may create and share forks or derivative versions for personal or development purposes when the following are respected:
 
-VRCL Client may inspect local application and file locations required for features such as:
+- Credit is given to the original VRCL Client project and ClancyVRC.
+- The fork clearly identifies itself as modified or unofficial when appropriate.
+- This license remains available with the fork or derivative project.
+- Existing copyright and attribution notices are not removed or obscured.
+- The fork does not falsely represent itself as an official VRCL Client release.
 
-- Steam and SteamVR detection
-- VRChat detection
-- VRChat/VR-related cache and configuration detection
-- VRCL Client setup
-- Launching and managing supported applications
-- Saving VRCL Client settings
+A reasonable attribution is:
 
-VRCL Client may connect to GitHub for release checking and software downloads. GitHub and other third-party services may independently process normal network information according to their own policies.
+> "Based on VRCL Client by ClancyVRC. This is a modified/unofficial version and is not an official VRCL Client release."
 
-The separate VRCL Client Privacy Statement provides additional information about the project's intended data practices.
+You may link directly to the official VRCL Client repository or official releases.
 
-## 6. Official Branding and Attribution
+## Commercial Use
 
-The VRCL Client name, wolf artwork, logo, icons, installer appearance, and other Official Branding identify the official project.
+VRCL Client may be used for personal, educational, development, and testing purposes.
 
-Forks and modified versions must clearly identify themselves as modified or unofficial when distributed.
+Commercial redistribution, selling modified VRCL Client builds, bundling VRCL Client into a paid product, or using the official VRCL branding as part of a commercial product requires prior written permission from ClancyVRC.
 
-A Fork or Derivative Work must not:
+This does not transfer ownership of the VRCL Client project or its original assets.
 
-- Present itself as the official VRCL Client.
-- Use the official VRCL Installer branding to imply official distribution.
-- Remove attribution to the original VRCL Client project.
-- Claim endorsement or authorization by ClancyVRC without permission.
+## Official Installer and Release System
 
-A suitable attribution is:
+The official VRCL Client project may distribute a Windows x64 application and a separate VRCL Installer.
 
-> "This project is based on VRCL Client by ClancyVRC. It is a modified/unofficial version and is not an official VRCL Client release."
+The official installer may connect to the official GitHub repository to:
 
-## 7. Forking and Distribution Requirements
+- Check for published VRCL Client releases.
+- Find the newest compatible release.
+- Download an official VRCL Client package.
+- Verify a SHA-256 digest when one is provided by GitHub.
+- Install the application to a location selected by the user.
+- Preserve supported VRCL `Data/` content during updates.
 
-Licensees may create and distribute Forks or Derivative Works provided that:
+Official release packages, installer behavior, build settings, and update mechanisms may change as the project develops.
 
-- The original VRCL Client project is credited.
-- A link to the official repository is retained where reasonably practical.
-- This Software License Agreement is included or linked with the Fork/Derivative Work.
-- The Fork/Derivative Work is clearly identified when it differs from the Official Build.
-- Existing copyright and attribution notices are retained.
-- Official Branding is not used to falsely imply that the work is official.
+A modified installer or release package must not be represented as the official VRCL Installer without authorization.
 
-Sharing the official repository or official release links is permitted.
+## Build and Project Information
 
-## 8. Commercial Use and Redistribution
-
-Personal use, development, testing, and non-commercial modification are permitted under this Agreement.
-
-Commercial distribution, paid copies, bundled products, or a commercial service based on VRCL Client requires prior permission from the Licensor unless separately authorized in writing.
-
-Nothing in this Agreement grants ownership of the VRCL Client project or its original assets.
-
-## 9. Build and Technical Configuration
-
-VRCL Client's official application is designed for:
+The official VRCL Client application is currently developed for:
 
 - **Windows x64**
 - **.NET 10**
-- Self-contained prebuilt releases for end users where applicable
+- Self-contained prebuilt releases for end users
 
-The repository may contain:
+The repository may contain source code, project files, build scripts, installer files, configuration, artwork, release tooling, and other materials used to develop and package VRCL Client.
 
-- C# source code
-- .NET project files
-- Build scripts
-- Installer source
-- Release configuration
-- UI resources
-- Artwork and branding
-- Updater components
-- Development and packaging files
+Official prebuilt releases are intended to allow end users to run VRCL Client without installing the .NET SDK or performing a source build.
 
-Official prebuilt releases are intended to allow normal users to run VRCL Client without installing the .NET SDK or performing a source build.
+Build configuration and technical requirements may change between releases.
 
-Build settings, dependencies, packaging, and supported features may change between releases.
+## Privacy and Local Data
 
-## 10. Third-Party Software and Services
+VRCL Client is designed to operate primarily on the user's own Windows PC.
 
-VRCL Client may interact with third-party software and services, including:
+The project does not intentionally collect, sell, rent, or distribute users' personal data.
+
+VRCL Client may inspect local application paths, configuration locations, and relevant cache locations when required for features such as setup detection, application launching, cache management, and saving VRCL settings.
+
+VRCL Client may contact GitHub for release and update functionality. GitHub and other third-party services may independently process normal network information according to their own policies.
+
+For more information, see the project's **Privacy Statement**.
+
+## Third-Party Software
+
+VRCL Client may work with or interact with software and services including:
 
 - VRChat
 - Steam
 - SteamVR
-- Meta/Quest PCVR software
-- GitHub
+- Meta / Quest PCVR software
 - Windows
+- GitHub
 - Other software installed or configured by the user
 
-These third-party products, names, trademarks, services, and software remain the property of their respective owners.
+These products, services, trademarks, and software remain the property of their respective owners.
 
-This Agreement does not grant rights to third-party software or trademarks.
+This license does not grant ownership or licensing rights to third-party software.
 
-Users remain responsible for complying with the terms and licenses of the third-party software they use with VRCL Client.
+Users are responsible for following the applicable terms and licenses of the third-party software they use with VRCL Client.
 
-## 11. Disclaimer of Warranty
+## Warranty
 
-VRCL Client is provided **"AS IS" and "AS AVAILABLE"**, without warranties of any kind, to the maximum extent permitted by applicable law.
+VRCL Client is provided **"AS IS" and "AS AVAILABLE"**, to the maximum extent permitted by applicable law.
 
-The Licensor disclaims warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.
+No express or implied warranty is provided, including warranties of merchantability, fitness for a particular purpose, or non-infringement.
 
-The Licensee assumes responsibility for the use of the Software and should maintain appropriate backups of important files, settings, and personal data.
+Users are responsible for maintaining appropriate backups of important files, settings, and personal data.
 
-## 12. Limitation of Liability
+## Liability
 
-To the maximum extent permitted by applicable law, the Licensor and contributors shall not be liable for direct, indirect, incidental, special, exemplary, or consequential damages arising from the use of, inability to use, modification of, or distribution of the Software.
+To the maximum extent permitted by applicable law, ClancyVRC and contributors to VRCL Client are not responsible for direct, indirect, incidental, special, consequential, or other damages resulting from the use of, inability to use, modification of, or distribution of VRCL Client.
 
-This includes, without limitation, loss of data, system configuration, revenue, profits, or service availability.
+This includes potential loss of data, settings, system configuration, revenue, profits, or service availability.
 
 Use of VRCL Client is at the user's own risk.
 
-## 13. Termination and Enforcement
+## Changes to the License
 
-This Agreement may terminate automatically if the Licensee materially breaches its terms.
+ClancyVRC may update this license as the VRCL Client project develops.
 
-Upon termination, the rights granted under this Agreement cease, and the Licensee must stop distributing or using the Software to the extent required by applicable law and this Agreement.
+Unless otherwise stated, an updated license applies to versions or releases made available after the updated license takes effect.
 
-The Licensor may pursue remedies available under applicable law for violations of this Agreement.
+## Acceptance
 
-## 14. General Provisions
+By downloading, installing, using, modifying, or distributing VRCL Client, you acknowledge that you have read and understood this license and agree to follow its terms.
 
-**No Waiver:** Failure to enforce a provision does not waive the Licensor's right to enforce it later.
-
-**Severability:** If any provision is found invalid or unenforceable, the remaining provisions remain in effect to the extent permitted by law.
-
-**Non-Transferability:** Rights granted under this Agreement may not be transferred in a manner that violates this Agreement or applicable law.
-
-**Entire Agreement:** This Agreement represents the license terms for VRCL Client unless a separate written agreement expressly supersedes or supplements it.
-
-## 15. Acceptance
-
-By downloading, installing, using, modifying, or distributing VRCL Client, the Licensee acknowledges that they have read and understood this Agreement and agree to comply with its terms.
-
-If you do not agree to these terms, do not use, modify, or distribute VRCL Client.
+If you do not agree with these terms, do not use, modify, or distribute VRCL Client.
 
 ---
 
 **VRCL Client**  
-Copyright (c) 2026 ClancyVRC  
+Copyright © 2026 ClancyVRC  
 All rights reserved.
