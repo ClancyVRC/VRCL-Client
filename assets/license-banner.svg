@@ -1,9 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" role="img" aria-labelledby="title desc">
-  <title id="title">VRCL Client License</title>
-  <desc id="desc">VRCL Client license information</desc>
-  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#171022"/><stop offset="1" stop-color="#432078"/></linearGradient></defs>
-  <rect width="1200" height="210" rx="26" fill="url(#bg)"/>
-  <path d="M70 160H1130" stroke="#a77cff" stroke-width="2" opacity=".7"/>
-  <text x="600" y="100" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">VRCL CLIENT</text>
-  <text x="600" y="143" text-anchor="middle" fill="#d9c8ff" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="4">LICENSE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 300" role="img" aria-labelledby="title desc">
+<title id="title">VRCL Client License</title><desc id="desc">Stylized VRCL Client License banner</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#100a19"/><stop offset=".55" stop-color="#30134f"/><stop offset="1" stop-color="#5b2bbd"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#bb8aff" stop-opacity=".38"/><stop offset="1" stop-color="#bb8aff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1400" height="300" rx="32" fill="url(#bg)"/>
+<circle cx="1180" cy="40" r="230" fill="url(#glow)"/>
+<path d="M90 70h260 M1050 70h260" stroke="#a978ff" stroke-width="4" stroke-linecap="round"/>
+<path d="M90 224h1220" stroke="#b98cff" stroke-opacity=".28" stroke-width="2"/>
+<text x="700" y="132" text-anchor="middle" fill="#fff" font-family="Segoe UI,Arial,sans-serif" font-size="68" font-weight="800" letter-spacing="4">VRCL CLIENT</text>
+<text x="700" y="184" text-anchor="middle" fill="#e4d4ff" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="600" letter-spacing="9">LICENSE</text>
+<text x="700" y="256" text-anchor="middle" fill="#c4a9ef" font-family="Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="4">SOURCE • USE • BRANDING</text>
 </svg>
