@@ -102,8 +102,11 @@ The installer is separate from the main VRCL Client.
 
 It:
 
-- Finds the current VRCL Client release on GitHub
-- Downloads the matching client package
+- Checks GitHub Releases every time it starts
+- Selects the newest compatible published VRCL Client release
+- Accepts the standard `VRCL_Client_v<version>.zip` package format
+- Also accepts the older `VRCL_Client_<version>.zip` format
+- Verifies SHA-256 when GitHub provides a digest
 - Installs it where you choose
 - Preserves existing `Data/` content
 - Lets you launch VRCL Client after installation
