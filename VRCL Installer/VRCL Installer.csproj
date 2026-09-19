@@ -12,20 +12,10 @@
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
 
-    <!-- Reuse the exact main VRCL Client icon so the standalone installer EXE
-         keeps the same wolf icon as the main app. -->
+    <!-- The build script generates this from the official VRCL wolf logo. -->
     <ApplicationIcon>vrcl_installer.ico</ApplicationIcon>
 
     <AssemblyName>VRCL.Installer</AssemblyName>
     <RootNamespace>VRCLInstaller</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <!-- Keep the real VRCL branding inside the single-file installer so the
-         installer window can show the same logo without ImageMagick. -->
-    <None Include="..\VRCL Client\wolf_logo.png"
-          Link="wolf_logo.png"
-          CopyToOutputDirectory="PreserveNewest"
-          CopyToPublishDirectory="PreserveNewest" />
-  </ItemGroup>
 </Project>
