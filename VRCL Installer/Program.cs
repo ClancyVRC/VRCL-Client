@@ -115,7 +115,7 @@ internal static class Program
             location.Controls.Add(MakeSectionTitle("INSTALL LOCATION"));
             locationBox = new TextBox {
                 Location = new Point(18, 40), Width = 610, Height = 32,
-                Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "VRCL Client - VRCL Client v1.0.0"),
+                Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "VRCL Client"),
                 BackColor = Color.FromArgb(28, 31, 40), ForeColor = Color.White, BorderStyle = BorderStyle.FixedSingle
             };
             location.Controls.Add(locationBox);
@@ -154,7 +154,7 @@ internal static class Program
             using var dialog = new FolderBrowserDialog { Description = "Choose the parent folder where VRCL Client should be installed." };
             if (Directory.Exists(locationBox.Text)) dialog.SelectedPath = Directory.GetParent(locationBox.Text)?.FullName ?? locationBox.Text;
             if (dialog.ShowDialog(this) == DialogResult.OK)
-                locationBox.Text = Path.Combine(dialog.SelectedPath, "VRCL Client - VRCL Client v1.0.0");
+                locationBox.Text = Path.Combine(dialog.SelectedPath, "VRCL Client");
         }
 
         private async Task CheckLatestAsync()
@@ -280,8 +280,24 @@ internal static class Program
 
         private static string? FindPayload(string root)
         {
+            // Do not depend on the versioned outer folder name used by the GitHub ZIP.
+            // The payload is valid whenever a directory contains VRCL Client.exe.
             var direct = Path.Combine(root, "VRCL Client");
-            if (File.Exists(Path.Combine(direct, "VRCL Client.exe"))) return direct;
+            if (File.Exists(Path.Combine(direct, "VRCL Client.exe")))
+                return direct;
+
+            // Primary lookup: locate the executable itself and use its containing directory.
+            // This handles packages such as:
+            // VRCL_Client_1.0.1-release-beta\\VRCL Client\\VRCL Client.exe
+            // as well as any future versioned outer-folder name.
+            var executable = Directory
+                .GetFiles(root, "VRCL Client.exe", SearchOption.AllDirectories)
+                .FirstOrDefault();
+
+            if (!string.IsNullOrWhiteSpace(executable))
+                return Path.GetDirectoryName(executable);
+
+            // Fallback for an unusual package layout where the folder name is still present.
             return Directory.GetDirectories(root, "VRCL Client", SearchOption.AllDirectories)
                 .FirstOrDefault(p => File.Exists(Path.Combine(p, "VRCL Client.exe")));
         }
