@@ -18,4 +18,7 @@
     <AssemblyName>VRCL.Installer</AssemblyName>
     <RootNamespace>VRCLInstaller</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="vrcl_app_icon.png" LogicalName="vrcl_app_icon.png" />
+  </ItemGroup>
 </Project>
