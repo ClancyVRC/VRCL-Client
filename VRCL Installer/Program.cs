@@ -73,7 +73,7 @@ internal static class Program
                 BackColor = Color.Transparent
             };
             try {
-                var logoPath = Path.Combine(AppContext.BaseDirectory, "vrcl_installer_logo.png");
+                var logoPath = Path.Combine(AppContext.BaseDirectory, "wolf_logo.png");
                 if (File.Exists(logoPath))
                     logo.Image = Image.FromFile(logoPath);
             }
