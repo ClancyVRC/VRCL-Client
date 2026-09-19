@@ -29,7 +29,7 @@ When a GitHub Release is published, the workflow:
 4. Verifies the Authenticode signature.
 5. Uploads the signed `VRCL.Installer.exe` to that release.
 
-The signing workflow uses GitHub OIDC with Azure Artifact Signing so the signing certificate/private key is not stored in the repository. Microsoft recommends Artifact Signing for non-Store Windows distribution, while SmartScreen reputation still builds over time for new files. citeturn0search1turn4search0
+The signing workflow uses GitHub OIDC with Azure Artifact Signing so the signing certificate/private key is not stored in the repository. Microsoft recommends Artifact Signing for non-Store Windows distribution, while SmartScreen reputation still builds over time for new files.
 
 ## Required GitHub configuration
 
