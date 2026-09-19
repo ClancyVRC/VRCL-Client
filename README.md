@@ -15,8 +15,8 @@
     <img src="https://img.shields.io/badge/%E2%86%93%20DOWNLOAD-5B2DE8?style=for-the-badge" alt="Download VRCL Installer">
   </a>
 <br>
-  <a href="https://www.virustotal.com/gui/home/upload">
-    <img src="https://img.shields.io/badge/%E2%9F%A9%20SCAN%20AT%20VIRUSTOTAL-00A9E0?style=for-the-badge" alt="Scan at VirusTotal">
+  <a href="https://www.virustotal.com/gui/file/33e845cf33acaaba80b99e5a23d5fc0d23c38e6e1c760d293cbde8c007eab487/detection">
+    <img src="https://img.shields.io/badge/%E2%9F%A9%20SCAN%20AT%20VIRUSTOTAL-00A9E0?style=for-the-badge" alt="Scan VRCL Installer at VirusTotal">
   </a>
   <br>
   <sub>VRCL.Installer.exe · Windows x64</sub>
@@ -93,6 +93,13 @@ It:
 - Lets you launch VRCL Client after installation
 
 The installer on the **v1.0.0 GitHub release has been replaced with the current fixed installer build.**
+
+### 🔎 VirusTotal
+
+Public VirusTotal reports for the current published builds:
+
+- [VRCL Installer — VirusTotal](https://www.virustotal.com/gui/file/33e845cf33acaaba80b99e5a23d5fc0d23c38e6e1c760d293cbde8c007eab487)
+- [VRCL Client v1.0.0 — VirusTotal](https://www.virustotal.com/gui/file/a49316acd16403eab6826a975c71c946626dfd613ab29571357edf4895841b10)
 
 ---
 
