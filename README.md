@@ -92,26 +92,6 @@ The installer on the **v1.0.0 GitHub release has been replaced with the current 
 
 ---
 
-## 📦 Current Release
-
-### VRCL Client v1.0.0-release-beta
-
-**Beta release**
-
-- [Release page](https://github.com/ClancyVRC/VRCL-Client/releases/tag/v1.0.0-release-beta)
-- [Download Installer](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe)
-- [Download Client ZIP](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL_Client_v1.0.0-release-beta.zip)
-
-The normal release package format is:
-
-`VRCL_Client_v<version>.zip`
-
-The standalone installer is:
-
-`VRCL.Installer.exe`
-
----
-
 ## 🎨 Themes
 
 VRCL Client supports custom themes and backgrounds.
