@@ -3,30 +3,40 @@ setlocal
 cd /d "%~dp0"
 
 echo.
-echo Preparing the VRCL installer logo and Windows icon...
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0PREPARE_INSTALLER_BRANDING.ps1"
-if errorlevel 1 (
-  echo.
-  echo Installer branding preparation failed.
-  pause
-  exit /b 1
-)
-
+echo ==========================================
+echo        VRCL Installer Build
+echo ==========================================
 echo.
-echo Building VRCL.Installer.exe...
+echo Building VRCL.Installer.exe with the
+echo official VRCL Client wolf icon...
+echo.
+
 dotnet publish "VRCL Installer.csproj" -c Release -r win-x64 --self-contained true -o "..\VRCL Installer Built"
 if errorlevel 1 (
   echo.
-  echo Build failed.
+  echo ==========================================
+  echo BUILD FAILED
+  echo ==========================================
+  echo.
   pause
   exit /b 1
 )
 
 echo.
-echo Installer build complete:
+echo ==========================================
+echo BUILD COMPLETE
+echo ==========================================
+echo.
+echo New installer:
 echo %~dp0..\VRCL Installer Built\VRCL.Installer.exe
 echo.
-echo Public releases are signed automatically by GitHub Actions before the installer is uploaded.
-echo This local build is for testing unless you sign it separately.
+echo The EXE contains:
+echo  - VRCL wolf application icon
+echo  - VRCL logo inside the installer
+echo  - self-contained .NET runtime
+echo.
+echo Public GitHub releases are signed automatically
+echo by the release workflow after Azure Artifact
+echo Signing is configured.
 echo.
 pause
