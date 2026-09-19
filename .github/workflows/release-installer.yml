@@ -1,0 +1,95 @@
+name: VRCL Installer Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing GitHub release tag to attach the signed installer to
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  build-sign-upload:
+    name: Build, sign and upload VRCL.Installer.exe
+    runs-on: windows-latest
+
+    steps:
+      - name: Resolve release tag
+        id: release
+        shell: pwsh
+        run: |
+          if ("${{ github.event_name }}" -eq "release") {
+            "tag=${{ github.event.release.tag_name }}" >> $env:GITHUB_OUTPUT
+          } else {
+            "tag=${{ inputs.release_tag }}" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Checkout release source
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ steps.release.outputs.tag }}
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Prepare installer logo and icon
+        shell: pwsh
+        run: |
+          & "$env:GITHUB_WORKSPACE\VRCL Installer\PREPARE_INSTALLER_BRANDING.ps1"
+
+      - name: Publish installer
+        shell: pwsh
+        run: |
+          dotnet publish "VRCL Installer\VRCL Installer.csproj" `
+            -c Release `
+            -r win-x64 `
+            --self-contained true `
+            -o "$env:GITHUB_WORKSPACE\release\VRCL Installer"
+
+      - name: Azure login for Artifact Signing
+        uses: azure/login@v3
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Sign VRCL.Installer.exe
+        uses: azure/artifact-signing-action@v2
+        with:
+          endpoint: ${{ vars.AZURE_SIGNING_ENDPOINT }}
+          signing-account-name: ${{ vars.AZURE_SIGNING_ACCOUNT }}
+          certificate-profile-name: ${{ vars.AZURE_CERTIFICATE_PROFILE }}
+          files: ${{ github.workspace }}\release\VRCL Installer\VRCL.Installer.exe
+          file-digest: SHA256
+          timestamp-rfc3161: http://timestamp.acs.microsoft.com
+          timestamp-digest: SHA256
+          description: VRCL Client Installer
+          description-url: https://github.com/ClancyVRC/VRCL-Client
+
+      - name: Verify Authenticode signature
+        shell: pwsh
+        run: |
+          $exe = "$env:GITHUB_WORKSPACE\release\VRCL Installer\VRCL.Installer.exe"
+          $signature = Get-AuthenticodeSignature -LiteralPath $exe
+          if ($signature.Status -ne "Valid") {
+            Write-Error "VRCL.Installer.exe is not validly signed. Status: $($signature.Status)"
+          }
+          Write-Host "Signed by: $($signature.SignerCertificate.Subject)"
+
+      - name: Upload signed installer to GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "${{ steps.release.outputs.tag }}" `
+            "$env:GITHUB_WORKSPACE\release\VRCL Installer\VRCL.Installer.exe" `
+            --clobber `
+            --repo "${{ github.repository }}"
