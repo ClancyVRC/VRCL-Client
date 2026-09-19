@@ -40,28 +40,7 @@ It puts the things you use most in one place:
 
 ## 🚀 Getting Started
 
-### What you need
-
-- 64-bit Windows
-- VRChat
-- SteamVR and/or Meta/Quest PCVR
-- An internet connection for installing and updating
-
-You **do not** need Visual Studio, the .NET SDK, or any developer tools to use VRCL Client.
-
-### Install
-
-1. Download **VRCL.Installer.exe** using the button above.
-2. Run the installer.
-3. Pick where you want VRCL Client installed.
-4. Let the installer download the current release.
-5. Launch **VRCL Client.exe**.
-
-On first launch, VRCL Client can help find the relevant VRChat, SteamVR, Steam, and Meta/Quest locations on your PC.
-
----
-
-## 🎮 Features
+### 🎮 Features
 
 ### VRChat Launching
 
