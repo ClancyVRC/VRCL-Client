@@ -43,17 +43,17 @@ Open:
 
 The installer checks the project's GitHub Releases when it starts and looks for the newest published VRCL Client release with its matching:
 
-`VRCL_Client_<version>.zip`
+`VRCL_Client_v<version>.zip` (older releases may use `VRCL_Client_<version>.zip`)
 
 It then downloads that release package rather than relying on an old bundled client copy.
 
 ### 3. Choose where VRCL Client goes
 
-The installer lets you choose the folder for the VRCL Client main files.
+The installer lets you choose the installation parent folder. It creates a `VRCL Client` folder inside it and places the complete client release there.
 
-A typical folder name is:
+A typical installed path is:
 
-`VRCL Client - VRC Client v1.0.0 - (main files)`
+`C:\Program Files\VRCL Client - VRCL Client v1.0.0\VRCL Client`
 
 The installer preserves the user's `Data/` directory when updating an existing installation.
 
@@ -129,7 +129,7 @@ The installer is intended to:
 - Find the newest published release with a matching client ZIP
 - Download the matching client package
 - Verify the GitHub SHA-256 digest when available
-- Ask where to install the VRCL Client main-files folder
+- Ask where to install VRCL Client
 - Install the selected release
 - Preserve existing `Data/` content
 - Let the user launch VRCL Client after installation
@@ -193,7 +193,7 @@ A full client release uses:
 
 and its matching package uses:
 
-`VRCL_Client_<version>.zip`
+`VRCL_Client_v<version>.zip` (older releases may use `VRCL_Client_<version>.zip`)
 
 For example:
 
