@@ -8,12 +8,9 @@ Run:
 
 `BUILD_FIXED_INSTALLER.cmd`
 
-The build automatically prepares the current VRCL wolf logo as:
+The build automatically restores the official VRCL wolf icon from `assets/vrcl-logo.svg`.
 
-- `vrcl_installer_logo.png` for the installer window
-- `vrcl_installer.ico` for the Windows EXE/application icon
-
-The branding source is the main VRCL Client logo at `assets/vrcl-app-icon.webp`.
+The icon is embedded into `VRCL.Installer.exe`, and the installer window reads the logo back from the EXE itself. No separate logo file is required beside the finished installer.
 
 ## Public release signing
 
@@ -62,6 +59,6 @@ No manual re-signing step is needed for public releases once the Azure Artifact 
 
 ## Notes
 
-- The installer is self-contained for Windows x64.
+- The installer is self-contained for Windows x64. The finished `VRCL.Installer.exe` is standalone and carries its application icon with it.
 - Local installer builds are not automatically trusted by Windows unless they are signed.
 - The public release workflow is the authoritative signed installer build.
