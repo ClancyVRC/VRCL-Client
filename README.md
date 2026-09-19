@@ -41,11 +41,13 @@ Open:
 
 `VRCL.Installer.exe`
 
-The installer checks the project's GitHub Releases when it starts and looks for the newest published VRCL Client release with its matching:
+The installer checks the project's GitHub Releases when it starts and looks for the newest published VRCL Client release with its matching client ZIP.
 
-`VRCL_Client_v<version>.zip` (older releases may use `VRCL_Client_<version>.zip`)
+The current public beta release uses:
 
-It then downloads that release package rather than relying on an old bundled client copy.
+`VRCL_Client_v1.0.0-release-beta.zip`
+
+The installer downloads the published release package rather than relying on an old bundled client copy.
 
 ### 3. Choose where VRCL Client goes
 
@@ -134,6 +136,8 @@ The installer is intended to:
 - Preserve existing `Data/` content
 - Let the user launch VRCL Client after installation
 
+The **v1.0.0-release-beta installer has been refreshed/replaced on the v1.0.0 GitHub release** so the release's installer asset matches the current installer build.
+
 The installer is **not** the main VRCL Client. Its job is to obtain and install the latest released client.
 
 ---
@@ -183,7 +187,7 @@ GitHub Releases are the distribution point for finished VRCL Client builds.
 
 - [Release page](https://github.com/ClancyVRC/VRCL-Client/releases/tag/v1.0.0-release-beta)
 - [Download VRCL.Installer.exe](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe)
-- [Download VRCL_Client_1.0.0-release-beta.zip](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL_Client_1.0.0-release-beta.zip)
+- [Download VRCL_Client_v1.0.0-release-beta.zip](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL_Client_v1.0.0-release-beta.zip)
 
 The beta release is marked as a pre-release on GitHub. Future stable releases can use the repository's standard latest-release download link once a stable release is published.
 
@@ -193,7 +197,7 @@ A full client release uses:
 
 and its matching package uses:
 
-`VRCL_Client_v<version>.zip` (older releases may use `VRCL_Client_<version>.zip`)
+`VRCL_Client_v<version>.zip`
 
 For example:
 
@@ -201,7 +205,7 @@ For example:
 
 with:
 
-`VRCL_Client_1.0.0-release-beta.zip`
+`VRCL_Client_v1.0.0-release-beta.zip`
 
 The standalone installer is:
 
