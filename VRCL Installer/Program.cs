@@ -73,9 +73,11 @@ internal static class Program
                 BackColor = Color.Transparent
             };
             try {
-                var logoPath = Path.Combine(AppContext.BaseDirectory, "wolf_logo.png");
-                if (File.Exists(logoPath))
-                    logo.Image = Image.FromFile(logoPath);
+                // Pull the logo directly from the EXE's embedded application icon.
+                // This keeps the standalone VRCL.Installer.exe self-contained.
+                var processPath = Environment.ProcessPath;
+                if (!string.IsNullOrWhiteSpace(processPath))
+                    logo.Image = Icon.ExtractAssociatedIcon(processPath)?.ToBitmap();
             }
             catch { }
 
