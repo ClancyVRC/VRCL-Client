@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">VRCL Client</title>
+  <desc id="desc">VRChat Launcher Client banner</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171022"/>
+      <stop offset="0.55" stop-color="#2d1552"/>
+      <stop offset="1" stop-color="#5b2de8"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8e63ff"/>
+      <stop offset="1" stop-color="#b58cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="260" rx="28" fill="url(#bg)"/>
+  <path d="M60 205H1140" stroke="url(#line)" stroke-width="2" opacity=".75"/>
+  <path d="M90 55H360" stroke="#8e63ff" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+  <path d="M840 55H1110" stroke="#8e63ff" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+  <text x="600" y="128" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="2">VRCL CLIENT</text>
+  <text x="600" y="171" text-anchor="middle" fill="#ded2ff" font-family="Segoe UI, Arial, sans-serif" font-size="25" letter-spacing="5">VRCHAT LAUNCHER</text>
+  <text x="600" y="228" text-anchor="middle" fill="#bda8f4" font-family="Segoe UI, Arial, sans-serif" font-size="17">Windows x64</text>
+</svg>
