@@ -55,7 +55,7 @@ internal static class Program
             }
 
             var root = new TableLayoutPanel { Dock = DockStyle.Fill, Padding = new Padding(28), ColumnCount = 1, RowCount = 7 };
-            root.RowStyles.Add(new RowStyle(SizeType.Absolute, 88));
+            root.RowStyles.Add(new RowStyle(SizeType.Absolute, 96));
             root.RowStyles.Add(new RowStyle(SizeType.Absolute, 92));
             root.RowStyles.Add(new RowStyle(SizeType.Absolute, 150));
             root.RowStyles.Add(new RowStyle(SizeType.Absolute, 95));
@@ -68,7 +68,7 @@ internal static class Program
 
             var logo = new PictureBox {
                 Location = new Point(0, 4),
-                Size = new Size(64, 64),
+                Size = new Size(78, 78),
                 SizeMode = PictureBoxSizeMode.Zoom,
                 BackColor = Color.Transparent
             };
@@ -85,14 +85,14 @@ internal static class Program
                 Text = "VRCL Client",
                 Font = new Font("Segoe UI Semibold", 25F),
                 AutoSize = true,
-                Location = new Point(78, 2)
+                Location = new Point(94, 2)
             };
             header.Controls.Add(logo);
             header.Controls.Add(title);
             header.Controls.Add(new Label {
                 Text = "Installer • always installs the newest published GitHub release",
                 Font = new Font("Segoe UI", 10F), ForeColor = Color.FromArgb(175, 182, 196),
-                AutoSize = true, Location = new Point(80, 48)
+                AutoSize = true, Location = new Point(96, 48)
             });
             root.Controls.Add(header, 0, 0);
 
@@ -103,13 +103,11 @@ internal static class Program
             root.Controls.Add(releaseCard, 0, 1);
 
             var readme = MakeCard();
-            readme.Controls.Add(MakeSectionTitle("READ ME"));
             readme.Controls.Add(new Label {
-                AutoSize = false, Location = new Point(18, 38), Size = new Size(720, 100),
+                AutoSize = false, Location = new Point(18, 20), Size = new Size(720, 105),
                 ForeColor = Color.FromArgb(205, 211, 222),
-                Text = "VRCL Installer checks GitHub every time it starts and installs the newest published VRCL Client package it can find.\r\n\r\n" +
-                       "The selected location is the VRCL Client installation folder. Existing Data/settings are preserved.\r\n\r\n" +
-                       "Repository: github.com/ClancyVRC/VRCL-Client"
+                Text = "This installer gets the latest VRCL Client from GitHub.\r\n\r\n" +
+                       "Choose an install location, then click Install Latest VRCL Client. Existing Data/settings are preserved."
             });
             root.Controls.Add(readme, 0, 2);
 
@@ -167,7 +165,7 @@ internal static class Program
                 latest = await FindLatestReleaseAsync();
                 if (latest == null) {
                     latestValue.Text = "No compatible published release found.";
-                    statusValue.Text = "No matching VRCL_Client_<version>.zip package was found.";
+                    statusValue.Text = "No compatible VRCL Client ZIP was found in the published releases.";
                     return;
                 }
                 latestValue.Text = $"{latest.Name} • {latest.AssetName}";
@@ -197,7 +195,10 @@ internal static class Program
 
                 foreach (var asset in release.GetProperty("assets").EnumerateArray()) {
                     var name = asset.GetProperty("name").GetString() ?? "";
-                    if (!name.Equals($"VRCL_Client_{version}.zip", StringComparison.OrdinalIgnoreCase)) continue;
+                    var expectedWithV = $"VRCL_Client_v{version}.zip";
+                    var expectedWithoutV = $"VRCL_Client_{version}.zip";
+                    if (!name.Equals(expectedWithV, StringComparison.OrdinalIgnoreCase) &&
+                        !name.Equals(expectedWithoutV, StringComparison.OrdinalIgnoreCase)) continue;
                     var digest = asset.TryGetProperty("digest", out var d) ? (d.GetString() ?? "") : "";
                     if (digest.StartsWith("sha256:", StringComparison.OrdinalIgnoreCase)) digest = digest[7..];
 
