@@ -1,10 +1,8 @@
 # VRCL Client
 
 <p align="center">
-  <img src="assets/vrcl-app-icon.webp" width="110" alt="VRCL Client wolf logo">
+  <img src="assets/github-banner.svg" width="100%" alt="VRCL Client banner">
 </p>
-
-<h1 align="center">VRCL Client</h1>
 
 <p align="center">
   A simple launcher for VRChat PCVR.
