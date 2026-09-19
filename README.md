@@ -38,41 +38,6 @@ It puts the things you use most in one place:
 
 ---
 
-## 🚀 Getting Started
-
-### 🎮 Features
-
-### VRChat Launching
-
-Launch your VR setup from one app, including:
-
-- Steam
-- SteamVR
-- VRChat
-- Meta / Quest PCVR
-
-### Oculus Startup System
-
-The optional **Oculus Startup System (OSS)** is available for Meta/Quest PCVR setups that need the Oculus/Meta startup process handled before VRChat.
-
-### Settings
-
-VRCL Client includes settings for:
-
-- Keybinds
-- Launch options
-- Tray controls
-- PC/VR setup
-- Themes and backgrounds
-
-### Updates
-
-VRCL Client can check GitHub Releases for updates and use the VRCL Updater to update the app.
-
-Your personal `Data/` folder is kept separate from normal application updates.
-
----
-
 ## 🧰 VRCL Installer
 
 The installer is separate from the main VRCL Client.
