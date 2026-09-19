@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
-    <img src="https://img.shields.io/badge/GET%20VRCL%20CLIENT-6C3CE9?style=for-the-badge&logo=vrchat&logoColor=white" alt="Get VRCL Client">
+    <img src="https://img.shields.io/badge/%E2%86%93%20DOWNLOAD%20VRCL%20INSTALLER-6C3CE9?style=for-the-badge" alt="Download VRCL Installer">
   </a>
   <br>
   <sub>VRCL.Installer.exe · Windows x64</sub>
