@@ -39,6 +39,20 @@ internal static class Program
             Font = new Font("Segoe UI", 10F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+            ShowInTaskbar = true;
+
+            // Use the embedded VRCL icon for the installer window and taskbar.
+            try
+            {
+                var processPath = Environment.ProcessPath;
+                Icon = !string.IsNullOrWhiteSpace(processPath)
+                    ? System.Drawing.Icon.ExtractAssociatedIcon(processPath) ?? SystemIcons.Application
+                    : SystemIcons.Application;
+            }
+            catch
+            {
+                Icon = SystemIcons.Application;
+            }
 
             var root = new TableLayoutPanel { Dock = DockStyle.Fill, Padding = new Padding(28), ColumnCount = 1, RowCount = 7 };
             root.RowStyles.Add(new RowStyle(SizeType.Absolute, 88));
@@ -81,7 +95,7 @@ internal static class Program
             location.Controls.Add(MakeSectionTitle("INSTALL LOCATION"));
             locationBox = new TextBox {
                 Location = new Point(18, 40), Width = 610, Height = 32,
-                Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "VRCL Client - VRC Client v1.0.0 - (main files)"),
+                Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "VRCL Client - VRCL Client v1.0.0"),
                 BackColor = Color.FromArgb(28, 31, 40), ForeColor = Color.White, BorderStyle = BorderStyle.FixedSingle
             };
             location.Controls.Add(locationBox);
@@ -120,7 +134,7 @@ internal static class Program
             using var dialog = new FolderBrowserDialog { Description = "Choose the parent folder where VRCL Client should be installed." };
             if (Directory.Exists(locationBox.Text)) dialog.SelectedPath = Directory.GetParent(locationBox.Text)?.FullName ?? locationBox.Text;
             if (dialog.ShowDialog(this) == DialogResult.OK)
-                locationBox.Text = Path.Combine(dialog.SelectedPath, "VRCL Client - VRC Client v1.0.0 - (main files)");
+                locationBox.Text = Path.Combine(dialog.SelectedPath, "VRCL Client - VRCL Client v1.0.0");
         }
 
         private async Task CheckLatestAsync()
@@ -182,7 +196,7 @@ internal static class Program
                 if (string.IsNullOrWhiteSpace(parent)) throw new InvalidOperationException("Choose an installation location.");
 
                 // FIX: the selected path is the parent; the actual application root is always <parent>\VRCL Client.
-                var installRoot = Path.Combine(parent, "VRCL Client");
+                var installRoot = parent;
                 Directory.CreateDirectory(installRoot);
 
                 var tempZip = Path.Combine(Path.GetTempPath(), $"VRCL_Client_{Guid.NewGuid():N}.zip");
@@ -218,9 +232,18 @@ internal static class Program
 
                     progress.Value = 100;
                     statusValue.Text = "Installation complete.";
-                    if (MessageBox.Show(this, "VRCL Client was installed successfully.\r\n\r\nLaunch it now?", "VRCL Client",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    var launchResult = MessageBox.Show(
+                        this,
+                        "VRCL Client was installed successfully.\r\n\r\nLaunch it now?",
+                        "VRCL Client",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information);
+
+                    if (launchResult == DialogResult.Yes)
                         Process.Start(new ProcessStartInfo(exe) { UseShellExecute = true });
+
+                    // Installation is complete. Close the installer fully after the prompt.
+                    Application.Exit();
                 }
                 finally {
                     TryDeleteDirectory(extractRoot);
