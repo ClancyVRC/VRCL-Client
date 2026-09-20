@@ -17,6 +17,10 @@
     <img src="https://img.shields.io/badge/%E2%9F%A9%20SCAN%20AT%20VIRUSTOTAL-00A9E0?style=for-the-badge" alt="Scan VRCL Installer at VirusTotal">
   </a>
   <br>
+  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
+    <img src="https://img.shields.io/badge/%E2%86%93%20GET%20.NET%2010-512BD4?style=for-the-badge" alt="Get .NET 10">
+  </a>
+  <br>
   <sub>VRCL.Installer.exe · Windows x64</sub>
 </p>
 
@@ -113,7 +117,7 @@ More themes can be added separately as the project grows.
 
 VRCL Client is a **.NET 10 / Windows x64** project.
 
-If you just want to use VRCL Client, download the installer above. You do not need to build it yourself.
+For manual builds, use the **.NET 10** download above. Published VRCL releases are self-contained, so normal users should use the installer above.
 
 ---
 
