@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20INSTALL%20VRCL-5B2DE8?style=for-the-badge" alt="Install VRCL">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20GET%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="Get VRCL Installer">
   </a>
   &nbsp;
   <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
