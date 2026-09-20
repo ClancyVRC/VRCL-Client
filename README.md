@@ -10,11 +10,11 @@
 
 <p align="center">
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20GET%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="VRCL Installer">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="VRCL Installer">
   </a>
   &nbsp;
   <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20GET%20.NET%20(REQUIRED)-512BD4?style=for-the-badge" alt=".NET 10 (required)">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20.NET%20(REQUIRED)-512BD4?style=for-the-badge" alt=".NET 10 (required)">
   </a>
   <br>
   <a href="https://www.virustotal.com/gui/file/a346bf17a0951f168f8ce5ffd63d36f7a99edf61386eddfb49ec1385c560b259?nocache=1">
