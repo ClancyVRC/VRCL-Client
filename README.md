@@ -10,18 +10,22 @@
 
 <p align="center">
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
-    <img src="https://img.shields.io/badge/%E2%86%93%20DOWNLOAD-5B2DE8?style=for-the-badge" alt="Download VRCL Installer">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20INSTALL%20VRCL-5B2DE8?style=for-the-badge" alt="Install VRCL">
   </a>
-<br>
+  &nbsp;
+  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20GET%20.NET%20(REQUIRED)-512BD4?style=for-the-badge" alt="Get .NET 10 (required)">
+  </a>
+  <br>
   <a href="https://www.virustotal.com/gui/file/a346bf17a0951f168f8ce5ffd63d36f7a99edf61386eddfb49ec1385c560b259?nocache=1">
     <img src="https://img.shields.io/badge/%E2%9F%A9%20SCAN%20AT%20VIRUSTOTAL-00A9E0?style=for-the-badge" alt="Scan VRCL Installer at VirusTotal">
   </a>
   <br>
-  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
-    <img src="https://img.shields.io/badge/%E2%86%93%20GET%20.NET%2010-512BD4?style=for-the-badge" alt="Get .NET 10">
-  </a>
-  <br>
   <sub>VRCL.Installer.exe · Windows x64</sub>
+</p>
+
+<p align="center">
+  <strong>Required:</strong> .NET 10 is required to run VRCL Client.
 </p>
 
 ---
@@ -117,7 +121,7 @@ More themes can be added separately as the project grows.
 
 VRCL Client is a **.NET 10 / Windows x64** project.
 
-For manual builds, use the **.NET 10** download above. Published VRCL releases are self-contained, so normal users should use the installer above.
+**.NET 10 is required to run VRCL Client.** For manual builds, use the **Get .NET (required)** button at the top.
 
 ---
 
