@@ -14,7 +14,7 @@
   </a>
   &nbsp;
   <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20.NET%20(REQUIRED)-512BD4?style=for-the-badge" alt=".NET 10 (required)">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20.NET%2010-512BD4?style=for-the-badge" alt=".NET 10">
   </a>
   <br>
   <a href="https://www.virustotal.com/gui/file/a346bf17a0951f168f8ce5ffd63d36f7a99edf61386eddfb49ec1385c560b259?nocache=1">
