@@ -30,7 +30,7 @@
 
 ---
 
-## 🐺 What is VRCL Client?
+## ❔️ What is VRCL Client?
 
 **VRCL** stands for **"VRChat Launcher"**.
 
