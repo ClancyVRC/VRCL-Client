@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/badge/%E2%AC%87%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="VRCL Installer">
   </a>
   &nbsp;
-  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
+  <a href="https://dotnet.microsoft.com/en-us/download">
     <img src="https://img.shields.io/badge/%E2%AC%87%20.NET%2010-512BD4?style=for-the-badge" alt=".NET 10">
   </a>
   <br>
