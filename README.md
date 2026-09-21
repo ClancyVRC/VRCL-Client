@@ -85,8 +85,6 @@ Your personal `Data/` folder is kept separate from normal application updates.
 
 The installer is separate from the main VRCL Client.
 
-**Current installer:** `v1.0.0-release-beta`
-
 It:
 
 - Checks GitHub Releases every time it starts
