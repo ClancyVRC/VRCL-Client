@@ -4,13 +4,13 @@
 
 # VRCL Client Privacy Statement
 
-**Effective date:** September 19, 2026
+**Effective date:** November 9, 2026
 
-VRCL Client is designed to run locally on your Windows PC. VRCL Client does **not intentionally collect, sell, rent, or distribute personal data**.
+VRCL Client is designed to run locally on your Windows PC. VRCL Client does **not intentionally collect, sell, rent, or distribute personal data** to the VRCL project or its developers.
 
 ## What VRCL Client does
 
-VRCL Client may inspect your local PC to locate software and files needed for VRChat PCVR features, such as:
+VRCL Client may inspect your local PC to locate software and files needed for VRChat session management and PCVR features, such as:
 
 - Steam / SteamVR
 - VRChat
@@ -19,15 +19,29 @@ VRCL Client may inspect your local PC to locate software and files needed for VR
 
 This information is used locally to configure and operate VRCL Client.
 
+## Discord Activity Status
+
+VRCL Client includes optional Discord Activity Status / Rich Presence.
+
+When this feature is enabled, VRCL may send a current activity label or status summary to Discord so Discord can display what VRCL is doing. Depending on your Discord privacy and activity settings, that status may be visible to other people on Discord.
+
+- This activity feature is optional.
+- The activity information is sent to Discord for display; it is not sent to the VRCL project as a telemetry or analytics report.
+- Discord processes activity information under its own privacy policy and account settings.
+- VRCL's local `Data/` folder, saved settings, and local PC paths are not uploaded to Discord by this activity feature.
+
+Disable the Discord activity feature in VRCL, or adjust your Discord activity/privacy settings, if you do not want VRCL activity displayed.
+
 ## What VRCL Client does not do
 
 VRCL Client does not intentionally:
 
-- Collect personal information for an external database
+- Collect personal information for an external VRCL database
 - Sell or rent personal information
 - Build a personal profile about users
 - Send your VRCL settings or local PC paths to the VRCL project
-- Distribute your personal data to other people or services
+- Upload the contents of your local `Data/` folder to the VRCL project
+- Distribute your personal data to other people or services, except for the optional activity information you choose to display through Discord as described above
 
 Your VRCL `Data/` folder and settings are intended to remain on your PC.
 
@@ -39,7 +53,7 @@ Those network requests are made to GitHub for release/update functionality. GitH
 
 ## Local files and permissions
 
-VRCL Client needs access to relevant local files and application locations in order to perform features such as setup detection, launching VRChat/SteamVR, cache management, and saving its own settings.
+VRCL Client needs access to relevant local files and application locations in order to perform features such as setup detection, launching VRChat / SteamVR, session management, cache management, and saving its own settings.
 
 VRCL Client should only use that access for the features provided by the application.
 
