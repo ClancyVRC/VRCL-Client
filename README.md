@@ -17,6 +17,10 @@
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases/tag/v1.0.2-release-beta">
     <img src="https://img.shields.io/badge/LATEST%20PUBLIC%20BETA-v1.0.2-512BD4?style=for-the-badge" alt="Latest public beta release">
   </a>
+  &nbsp;
+  <a href="https://dotnet.microsoft.com/en-us/download">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20GET%20.NET%2010-512BD4?style=for-the-badge" alt="Get .NET 10">
+  </a>
   <br>
   <sub>Windows x64 · .NET 10 / WPF · Source-available</sub>
 </p>
@@ -94,7 +98,7 @@ VRCL Client is a **Windows x64 WPF application built with .NET 10**.
 
 To build a release from source on Windows:
 
-1. Install the .NET 10 SDK.
+1. Install the .NET 10 SDK using the **Get .NET 10** link above.
 2. Open Command Prompt in the project directory.
 3. Run `BUILD_RELEASE.cmd`.
 
