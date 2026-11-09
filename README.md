@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <strong>Your VRChat sessions. One place to manage them.</strong><br>
-  Start, restart, and close VRChat in VR or Desktop, manage PCVR startup, and keep the tools you use most right at your fingertips.
+  <strong>Take control of your VRChat sessions.</strong><br>
+  Manage VR and Desktop sessions from one place. Launch VRChat, start SteamVR when needed, monitor your session, and quickly restart or close VRChat whenever you need.
 </p>
 
 <p align="center">
