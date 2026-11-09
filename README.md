@@ -1,149 +1,120 @@
 # VRCL Client
 
 <p align="center">
-  <img src="assets/github-banner.svg" width="100%" alt="VRCL Client banner">
+  <img src="assets/github-banner.svg" width="100%" alt="VRCL Client — manage your VRChat sessions">
 </p>
 
 <p align="center">
-  A simple launcher for VRChat PCVR.
+  <strong>Manage your VRChat sessions from one place.</strong><br>
+  Launch, monitor, restart, and close VRChat in VR or Desktop without juggling separate shortcuts.
 </p>
 
 <p align="center">
-  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="VRCL Installer">
+  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.2-release-beta/VRCL.Installer.exe">
+    <img src="https://img.shields.io/badge/%E2%AC%87%20DOWNLOAD%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="Download VRCL Installer">
   </a>
   &nbsp;
-  <a href="https://dotnet.microsoft.com/en-us/download">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20.NET%2010-512BD4?style=for-the-badge" alt=".NET 10">
+  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/tag/v1.0.2-release-beta">
+    <img src="https://img.shields.io/badge/LATEST%20PUBLIC%20BETA-v1.0.2-512BD4?style=for-the-badge" alt="Latest public beta release">
   </a>
   <br>
-  <a href="https://www.virustotal.com/gui/file/a346bf17a0951f168f8ce5ffd63d36f7a99edf61386eddfb49ec1385c560b259?nocache=1">
-    <img src="https://img.shields.io/badge/%E2%9F%A9%20SCAN%20AT%20VIRUSTOTAL-00A9E0?style=for-the-badge" alt="Scan VRCL Installer at VirusTotal">
-  </a>
-  <br>
-  <sub>VRCL.Installer.exe · Windows x64</sub>
+  <sub>Windows x64 · .NET 10 / WPF · Source-available</sub>
 </p>
 
 <p align="center">
-  <strong>Required:</strong> .NET 10 is required to run VRCL Client.
+  <strong>Packaged releases are self-contained.</strong> The .NET 10 SDK is needed when building from source.
 </p>
 
 ---
 
-## ❔️ What is VRCL Client?
+## Manage your VRChat sessions
 
-**VRCL** stands for **"VRChat Launcher"**.
+**VRCL** stands for **VRChat Launcher**. VRCL Client has grown beyond a basic launcher: it brings your VRChat session controls, PCVR startup options, and everyday management tools together in one Windows app.
 
-VRCL Client is a Windows app made to make starting and managing VRChat PCVR a little easier.
+### Session controls
 
-It puts the things you use most in one place:
+- Start VRChat in **VR** with the SteamVR startup sequence.
+- Start VRChat in **Desktop** without unnecessarily starting SteamVR.
+- Restart or close VR and Desktop sessions independently.
+- Use keybinds and tray actions for common session controls.
 
-- VRChat and SteamVR launching
-- Meta / Quest PCVR options
-- PC setup detection
-- Keybinds and settings
-- Tray controls
-- Themes and backgrounds
-- Built-in update support
+### PCVR setup and control
 
----
+- Detect relevant PC and VR software.
+- Support Meta / Quest PCVR startup through the optional **Oculus Startup System (OSS)**.
+- Configure available VR and launch options from Settings.
+- Use built-in cache and setup tools without having to hunt through folders.
 
-### 🎮 Features
+### Status and Discord
 
-### VRChat Launching
+- Show what VRCL is currently doing, including launch activity and the active app or VRCL view.
+- Use Discord Activity Status / Rich Presence to reflect VRCL activity when enabled.
+- Control whether VRCL activity is displayed through the app's available settings.
 
-Launch your VR setup from one app, including:
+### Personalization and updates
 
-- Steam
-- SteamVR
-- VRChat
-- Meta / Quest PCVR
-
-### Oculus Startup System
-
-The optional **Oculus Startup System (OSS)** is available for Meta/Quest PCVR setups that need the Oculus/Meta startup process handled before VRChat.
-
-### Settings
-
-VRCL Client includes settings for:
-
-- Keybinds
-- Launch options
-- Tray controls
-- PC/VR setup
-- Themes and backgrounds
-
-### Updates
-
-VRCL Client can check GitHub Releases for updates and use the VRCL Updater to update the app.
-
-Your personal `Data/` folder is kept separate from normal application updates.
+- Customize themes, colors, and backgrounds.
+- Use the built-in updater to check for compatible published releases.
+- Keep personal settings and app data in the separate `Data/` folder.
 
 ---
 
-## 🧰 VRCL Installer
+## Download and install
 
-The installer is separate from the main VRCL Client.
+The newest public release currently listed on GitHub is **v1.0.2-release-beta**.
 
-It:
+1. Download **[VRCL.Installer.exe](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.2-release-beta/VRCL.Installer.exe)** from the published release.
+2. Run the installer and choose where VRCL Client should be installed.
+3. Launch VRCL Client and use its session controls to start VRChat in VR or Desktop.
 
-- Checks GitHub Releases every time it starts
-- Selects the newest compatible published VRCL Client release
-- Accepts the standard `VRCL_Client_v<version>.zip` package format
-- Also accepts the older `VRCL_Client_<version>.zip` format
-- Verifies SHA-256 when GitHub provides a digest
-- Installs it where you choose
-- Preserves existing `Data/` content
-- Lets you launch VRCL Client after installation
+The installer checks GitHub Releases for compatible published packages, verifies SHA-256 when GitHub provides a digest, and preserves supported existing `Data/` content during installation or updates.
 
-The installer on the **v1.0.0 GitHub release has been replaced with the current fixed installer build.**
+[View the v1.0.2 public beta release and its files](https://github.com/ClancyVRC/VRCL-Client/releases/tag/v1.0.2-release-beta)
 
-### 🔎 VirusTotal
-
-Public VirusTotal reports for the current published builds:
-
-- [VRCL Installer — VirusTotal](https://www.virustotal.com/gui/file/a346bf17a0951f168f8ce5ffd63d36f7a99edf61386eddfb49ec1385c560b259?nocache=1)
-- [VRCL Client v1.0.0 — VirusTotal](https://www.virustotal.com/gui/file/a49316acd16403eab6826a975c71c946626dfd613ab29571357edf4895841b10)
+> Development builds newer than the latest published release are not public downloads until they are published as a GitHub Release.
 
 ---
 
-## 🎨 Themes
+## Your data
 
-VRCL Client supports custom themes and backgrounds.
+VRCL keeps personal application data in its `Data/` folder. Keep this folder when moving or updating an installation if you want to retain your settings and other VRCL data.
 
-More themes can be added separately as the project grows.
-
----
-
-## 🛠️ Developers
-
-VRCL Client is a **.NET 10 / Windows x64** project.
-
-**.NET 10 is required to run VRCL Client.** For manual builds, use the **Get .NET (required)** button at the top.
-
----
-
-## 📌 Notes
-
-- Windows only
-- Keep the `Data/` folder if you want to keep your settings and personal app data.
-- Don't mix files from different releases.
+- Do not mix files from different releases.
 - Use the installer for a new installation.
-- Use the built-in updater for supported app updates.
+- Use the built-in updater for supported updates.
+- Back up your `Data/` folder before making manual changes.
+
+See the [Privacy Statement](PRIVACY.md) for more information about local data and network connections.
 
 ---
 
-## 📄 Project Information
+## Developers
+
+VRCL Client is a **Windows x64 WPF application built with .NET 10**.
+
+To build a release from source on Windows:
+
+1. Install the .NET 10 SDK.
+2. Open Command Prompt in the project directory.
+3. Run `BUILD_RELEASE.cmd`.
+
+The repository includes the client, updater, installer project files, build scripts, and supporting assets.
+
+---
+
+## Project information
 
 <p align="center">
   <a href="PRIVACY.md">🔒 Privacy Statement</a>
   &nbsp;•&nbsp;
-  <a href="LICENSE.md">📜 License</a>
+  <a href="LICENSE.md">📜 Source-Available License</a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/ClancyVRC/VRCL-Client/releases">📦 Releases</a>
 </p>
 
 ---
 
 <p align="center">
   <strong>VRCL Client</strong><br>
-  Simple VRChat PCVR launching.
+  Manage your VRChat sessions.
 </p>
