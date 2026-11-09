@@ -88,19 +88,13 @@ See the [Privacy Statement](PRIVACY.md) for more information about local data an
 
 ---
 
-## Developers
+## Repository contents
 
-VRCL Client is a **Windows x64 WPF application built with .NET 10**.
+The public repository is focused on the **VRCL Installer**, its build files, project documentation, and published application releases.
 
-To build a release from source on Windows:
+To install VRCL Client, use the **Download VRCL Installer** button above or browse the [Releases](https://github.com/ClancyVRC/VRCL-Client/releases) page. The actual VRCL Client application packages are distributed through Releases.
 
-1. Install the .NET 10 SDK using the **Get .NET 10** link above.
-2. Open Command Prompt in the project directory.
-3. Run `BUILD_RELEASE.cmd`.
-
-The repository includes the client, updater, installer project files, build scripts, and supporting assets.
-
----
+To build the installer from source on Windows, install the **.NET 10 SDK** using the link above, then run `BUILD_FIXED_INSTALLER.cmd` from the `VRCL Installer` folder.
 
 ## Project information
 
