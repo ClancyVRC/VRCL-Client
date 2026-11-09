@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/privacy-banner.svg" width="100%" alt="VRCL Client Privacy Statement banner">
+  <img src=".github/branding/privacy-banner.svg" width="100%" alt="VRCL Client Privacy Statement banner">
 </p>
 
 # VRCL Client Privacy Statement
