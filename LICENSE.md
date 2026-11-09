@@ -6,11 +6,14 @@
 
 **Copyright © 2026 ClancyVRC. All rights reserved.**
 
-**Effective:** September 19, 2026
+**Effective:** September 19, 2026  
+**Last reviewed:** November 9, 2026 (project description and feature scope only; the permissions and restrictions below are unchanged).
 
 ## About This License
 
-VRCL Client is a **source-available proprietary project**. The source code is publicly available so users and developers can inspect, learn from, modify, and develop the project within the rights granted by this license.
+VRCL Client is a **source-available proprietary project**: a Windows application focused on **managing VRChat sessions**. It brings VR and Desktop session launching, restart and close controls, SteamVR and supported Meta / Quest PCVR startup options, status display, keybinds, tray controls, cache and setup tools, customization, and update support together in one place. Optional Discord Activity Status / Rich Presence can reflect VRCL activity through Discord.
+
+The source code is publicly available so users and developers can inspect, learn from, modify, and develop the project within the rights granted by this license.
 
 This license is **not an OSI-approved open-source license**.
 
@@ -40,6 +43,7 @@ Modifications may include changes to:
 - Settings
 - Launch behavior
 - Keybinds
+- Session controls and status display
 - Features
 - Build configuration
 - Other parts of the source code
@@ -124,9 +128,9 @@ VRCL Client is designed to operate primarily on the user's own Windows PC.
 
 The project does not intentionally collect, sell, rent, or distribute users' personal data.
 
-VRCL Client may inspect local application paths, configuration locations, and relevant cache locations when required for features such as setup detection, application launching, cache management, and saving VRCL settings.
+VRCL Client may inspect local application paths, configuration locations, and relevant cache locations when required for features such as setup detection, application launching, session management, cache management, and saving VRCL settings.
 
-VRCL Client may contact GitHub for release and update functionality. GitHub and other third-party services may independently process normal network information according to their own policies.
+VRCL Client may contact GitHub for release and update functionality. Optional Discord Activity Status / Rich Presence uses the Discord service to display activity information. GitHub, Discord, and other third-party services may independently process normal network or activity information according to their own policies.
 
 For more information, see the project's **Privacy Statement**.
 
@@ -138,6 +142,7 @@ VRCL Client may work with or interact with software and services including:
 - Steam
 - SteamVR
 - Meta / Quest PCVR software
+- Discord
 - Windows
 - GitHub
 - Other software installed or configured by the user
