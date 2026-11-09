@@ -1,7 +1,7 @@
 # VRCL Client
 
 <p align="center">
-  <img src="assets/github-banner.svg" width="100%" alt="VRCL Client — manage your VRChat sessions">
+  <img src=".github/branding/github-banner.svg" width="100%" alt="VRCL Client — manage your VRChat sessions">
 </p>
 
 <p align="center">
