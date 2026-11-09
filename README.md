@@ -14,10 +14,6 @@
     <img src="https://img.shields.io/badge/%E2%AC%87%20DOWNLOAD%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="Download VRCL Installer">
   </a>
   &nbsp;
-  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/tag/v1.0.2-release-beta">
-    <img src="https://img.shields.io/badge/LATEST%20PUBLIC%20BETA-v1.0.2-512BD4?style=for-the-badge" alt="Latest public beta release">
-  </a>
-  &nbsp;
   <a href="https://dotnet.microsoft.com/en-us/download">
     <img src="https://img.shields.io/badge/%E2%AC%87%20GET%20.NET%2010-512BD4?style=for-the-badge" alt="Get .NET 10">
   </a>
