@@ -55,7 +55,7 @@
 
 **VRCL** stands for **VRChat Launcher**.
 
-VRCL Client is a Windows companion built around one main idea: **make managing your VRChat sessions easier.** Instead of juggling separate shortcuts, startup steps, and settings, VRCL brings your VR and Desktop launch controls and everyday VRChat tools together in one place.
+VRCL Client is a Windows companion app for managing VRChat sessions. It brings VR and Desktop launching, SteamVR startup, session controls, and useful VRChat tools together in one place.
 
 ## Main features
 
