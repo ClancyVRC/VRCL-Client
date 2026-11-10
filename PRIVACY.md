@@ -64,6 +64,16 @@ VRCL does not control the independent data practices of GitHub.
 - The only described optional activity sharing is Discord Rich Presence, which you can turn off.
 - GitHub receives the normal information associated with release checks and downloads when the app connects to GitHub.
 
+## VRChat Compatibility
+
+VRCL Client is designed to operate as an external launcher and companion application. It does not modify VRChat's game files or intentionally alter the in-game client.
+
+- VRCL does not inject code into the VRChat client.
+- VRCL does not intentionally interfere with VRChat's normal operation.
+- VRCL is not designed to bypass VRChat's security, moderation, or platform restrictions.
+
+VRCL is an independent community project and is not affiliated with or endorsed by VRChat. This describes the intended operation of VRCL; it is not a guarantee or official determination of compliance with VRChat's Terms of Service. Users remain responsible for following VRChat's current rules and policies.
+
 ## Changes to this statement
 
 This statement may be updated if VRCL's features or data practices change. The latest version will be maintained in this repository.
