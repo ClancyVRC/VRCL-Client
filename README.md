@@ -153,18 +153,6 @@ For details about local files, GitHub update checks, and optional Discord Activi
 
 ---
 
-## Project information
-
-<p align="center">
-  <a href="PRIVACY.md">🔒 Privacy Statement</a>
-  &nbsp;•&nbsp;
-  <a href="LICENSE.md">📜 License</a>
-  &nbsp;•&nbsp;
-  <a href="https://github.com/ClancyVRC/VRCL-Client/releases">📦 Releases</a>
-</p>
-
----
-
 ## 🛡️ Security Scan & Download Reputation
 
 VRCL Client and its installer are relatively new, so Windows may display a Microsoft Defender SmartScreen message stating that the installer is **not commonly downloaded** or that its publisher is unknown. This is a reputation warning and does not, by itself, mean the file has been identified as malware.
@@ -181,7 +169,21 @@ The submitted installer was also scanned with VirusTotal. **The shared report sh
 
 > VirusTotal results can change as security vendors update their detections. A clean scan is reassuring, but it is not an absolute guarantee that a file is harmless. Always download VRCL Installer from this official repository.
 
+
 ---
+
+## Project information
+
+<p align="center">
+  <a href="PRIVACY.md">🔒 Privacy Statement</a>
+  &nbsp;•&nbsp;
+  <a href="LICENSE.md">📜 License</a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/ClancyVRC/VRCL-Client/releases">📦 Releases</a>
+</p>
+
+---
+
 
 <p align="center">
   <strong>VRCL Client</strong><br>
