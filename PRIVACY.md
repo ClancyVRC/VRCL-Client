@@ -4,63 +4,70 @@
 
 # VRCL Client Privacy Statement
 
-**Effective date:** November 9, 2026
+**Effective date:** November 10, 2026
 
-VRCL Client is designed to run locally on your Windows PC. VRCL Client does **not intentionally collect, sell, rent, or distribute personal data** to the VRCL project or its developers.
+VRCL Client is designed to run locally on your Windows PC. **The VRCL project and its developers do not collect, store, sell, share, or distribute your personal user data.** VRCL does not use an account system, personal-data profiles, advertising trackers, or analytics/telemetry reporting.
 
-## What VRCL Client does
+Some features connect to third-party services to work. Those connections are explained below so you know what information may leave your PC and who receives it.
 
-VRCL Client may inspect your local PC to locate software and files needed for VRChat session management and PCVR features, such as:
+## Data collection and privacy
 
-- Steam / SteamVR
-- VRChat
-- Relevant VRChat and VR-related cache or configuration locations
-- VRCL Client's own application and Data locations
+VRCL Client does not intentionally collect or send personal user data to the VRCL project or its developers.
 
-This information is used locally to configure and operate VRCL Client.
+In particular, VRCL does not:
+- Collect personal information for a VRCL user database.
+- Track users' activity for analytics or advertising.
+- Create profiles based on your use of the application.
+- Upload your saved settings, local files, or the contents of your `Data/` folder to VRCL.
+- Sell, rent, share, or distribute your personal user data.
 
-## Discord Activity Status
+There is no VRCL account registration or sign-in required to use the client.
 
-VRCL Client includes optional Discord Activity Status / Rich Presence.
+## Local PC access and data
 
-When this feature is enabled, VRCL may send a current activity label or status summary to Discord so Discord can display what VRCL is doing. Depending on your Discord privacy and activity settings, that status may be visible to other people on Discord.
+VRCL may check local application locations, files, and settings needed to provide its features, including:
 
-- This activity feature is optional.
-- The activity information is sent to Discord for display; it is not sent to the VRCL project as a telemetry or analytics report.
-- Discord processes activity information under its own privacy policy and account settings.
-- VRCL's local `Data/` folder, saved settings, and local PC paths are not uploaded to Discord by this activity feature.
+- Steam and SteamVR installation locations.
+- VRChat installation, configuration, and cache locations.
+- Relevant VR and PCVR software.
+- VRCL Client's own application and `Data/` folders.
 
-Disable the Discord activity feature in VRCL, or adjust your Discord activity/privacy settings, if you do not want VRCL activity displayed.
+This information is used locally for setup detection, launching, session management, cache tools, and saving your preferences. VRCL's settings and application data are intended to remain on your PC.
 
-## What VRCL Client does not do
+## Optional Discord Activity Status
 
-VRCL Client does not intentionally:
+VRCL includes an optional Discord Activity Status / Rich Presence feature.
 
-- Collect personal information for an external VRCL database
-- Sell or rent personal information
-- Build a personal profile about users
-- Send your VRCL settings or local PC paths to the VRCL project
-- Upload the contents of your local `Data/` folder to the VRCL project
-- Distribute your personal data to other people or services, except for the optional activity information you choose to display through Discord as described above
+When enabled, VRCL sends an activity status to Discord so Discord can display what VRCL is doing. Depending on your Discord settings, this activity may be visible to friends or other people.
 
-Your VRCL `Data/` folder and settings are intended to remain on your PC.
+- Discord Activity is optional and can be disabled in VRCL.
+- Only the activity information needed for the presence feature is sent by VRCL.
+- VRCL does not send your local `Data/` folder, saved settings, or local PC file paths through this feature.
+- The activity information is sent to Discord, not to the VRCL developers.
+- Discord handles information it receives under its own privacy policy and your Discord account settings.
 
-## GitHub and updates
+If you do not want your VRCL activity displayed, disable Discord Activity in VRCL or adjust your Discord activity/privacy settings.
 
-VRCL Client and the VRCL Installer may connect to GitHub to check published releases and download VRCL Client packages.
+## GitHub releases and updates
 
-Those network requests are made to GitHub for release/update functionality. GitHub may process normal network information associated with those requests under GitHub's own policies. VRCL does not control GitHub's independent data practices.
+VRCL Client and the VRCL Installer may connect to GitHub to check for published releases and download update packages.
 
-## Local files and permissions
+These requests are used for update functionality. They do not intentionally send your personal files, VRCL settings, or `Data/` folder to the VRCL project. As with any connection to a website, GitHub may receive standard connection information (such as your IP address and request details) and process it under GitHub's own privacy policy.
 
-VRCL Client needs access to relevant local files and application locations in order to perform features such as setup detection, launching VRChat / SteamVR, session management, cache management, and saving its own settings.
+VRCL does not control the independent data practices of GitHub.
 
-VRCL Client should only use that access for the features provided by the application.
+## What this means
+
+- Your VRCL settings and local application data stay on your PC.
+- VRCL does not operate a service that collects or stores users' personal data.
+- VRCL does not sell, rent, or distribute your personal user data.
+- The only described optional activity sharing is Discord Rich Presence, which you can turn off.
+- GitHub receives the normal information associated with release checks and downloads when the app connects to GitHub.
 
 ## Changes to this statement
 
-This privacy statement may be updated if VRCL Client's functionality or data practices change. The current version will be maintained in this repository.
+This statement may be updated if VRCL's features or data practices change. The latest version will be maintained in this repository.
 
 ## Contact
 
-For questions about VRCL Client's privacy practices, please use the project's GitHub repository and issue/discussion channels.
+For privacy questions or concerns, please use the project's GitHub repository issue or discussion channels.
