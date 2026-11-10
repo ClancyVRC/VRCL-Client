@@ -27,6 +27,25 @@
 
 ---
 
+## Patch Notes & Update Information
+
+**November 10, 2026 — Installer and updater fixes**
+
+The VRCL Installer and update system have received fixes to improve release detection, installation, and updating.
+
+### VRCL Installer
+- Fixed release detection so the installer can find and offer the latest compatible published VRCL Client version.
+- Fixed the installation flow for installing the latest available release.
+- If you have an older copy of `VRCL.Installer.exe`, we recommend deleting that copy from your PC and downloading the current installer using the **Download VRCL Installer** button above.
+
+### Update compatibility
+- **v1.0.0-release-beta through v1.0.2-release-beta:** These older builds use a legacy update system and currently update to the latest beta release, rather than moving directly to full releases.
+- **v1.0.3-release-beta and newer:** The updated updater supports moving to any compatible published beta or full release.
+
+The installer and update flow have been tested successfully on the developer's system. Additional testing on another PC is still pending.
+
+---
+
 ## What is VRCL Client?
 
 **VRCL** stands for **VRChat Launcher**.
