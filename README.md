@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.2-release-beta/VRCL.Installer.exe">
+  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
     <img src="https://img.shields.io/badge/%E2%AC%87%20DOWNLOAD%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="Download VRCL Installer">
   </a>
   <br>
