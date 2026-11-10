@@ -165,6 +165,24 @@ For details about local files, GitHub update checks, and optional Discord Activi
 
 ---
 
+## 🛡️ Security Scan & Download Reputation
+
+VRCL Client and its installer are relatively new, so Windows may display a Microsoft Defender SmartScreen message stating that the installer is **not commonly downloaded** or that its publisher is unknown. This is a reputation warning and does not, by itself, mean the file has been identified as malware.
+
+A submission for `VRCL.Installer.exe` has been successfully received by Microsoft for review. The review is pending; this does not mean Microsoft has approved or certified the installer.
+
+The submitted installer was also scanned with VirusTotal. **The shared report showed no antivirus detections at the time it was checked.** You can view the report and its current results here:
+
+<p align="center">
+  <a href="https://www.virustotal.com/gui/file/26d59c00e35af47f6ba34929be1d665c6a1f08f6533c33772c69c340d833eabf">
+    <img src="https://img.shields.io/badge/VIEW%20VIRUSTOTAL%20SCAN-394EFF?style=for-the-badge" alt="View VRCL Installer VirusTotal report">
+  </a>
+</p>
+
+> VirusTotal results can change as security vendors update their detections. A clean scan is reassuring, but it is not an absolute guarantee that a file is harmless. Always download VRCL Installer from this official repository.
+
+---
+
 <p align="center">
   <strong>VRCL Client</strong><br>
   <em>Manage your VRChat sessions.</em>
