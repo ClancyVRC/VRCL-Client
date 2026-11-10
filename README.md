@@ -27,11 +27,16 @@
 
 ---
 
-## Patch Notes & Update Information
+<div align="center">
 
-**November 10, 2026 — Installer and updater fixes**
+## 🛠️ Patch Notes & Update Information
 
-The VRCL Installer and update system have received fixes to improve release detection, installation, and updating.
+<sub>INSTALLER &amp; UPDATER NOTICE · NOVEMBER 10, 2026</sub>
+
+</div>
+
+> [!IMPORTANT]
+> The VRCL Installer and update system have been updated to improve release detection, installation, and version compatibility.
 
 ### VRCL Installer
 - Fixed release detection so the installer can find and offer the latest compatible published VRCL Client version.
@@ -42,7 +47,7 @@ The VRCL Installer and update system have received fixes to improve release dete
 - **v1.0.0-release-beta through v1.0.2-release-beta:** These older builds use a legacy update system and currently update to the latest beta release, rather than moving directly to full releases.
 - **v1.0.3-release-beta and newer:** The updated updater supports moving to any compatible published beta or full release.
 
-The installer and update flow have been tested successfully on the developer's system. Additional testing on another PC is still pending.
+<sub>Tested successfully on the developer's system. Additional testing on another PC is still pending.</sub>
 
 ---
 
