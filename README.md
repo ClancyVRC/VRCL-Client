@@ -158,7 +158,7 @@ For details about local files, GitHub update checks, and optional Discord Activi
 <p align="center">
   <a href="PRIVACY.md">🔒 Privacy Statement</a>
   &nbsp;•&nbsp;
-  <a href="LICENSE.md">📜 Source-Available License</a>
+  <a href="LICENSE.md">📜 License</a>
   &nbsp;•&nbsp;
   <a href="https://github.com/ClancyVRC/VRCL-Client/releases">📦 Releases</a>
 </p>
