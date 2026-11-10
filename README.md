@@ -123,7 +123,7 @@ VRCL includes its own update flow so supported updates are easier to install.
 
 The latest public release currently available is **v1.0.2-release-beta**.
 
-1. Download **[VRCL.Installer.exe](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.2-release-beta/VRCL.Installer.exe)** using the installer button above.
+1. Download **[VRCL.Installer.exe](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe)** using the installer button above.
 2. Run the installer and choose where you want VRCL Client installed.
 3. Let the installer find and install a compatible published version.
 4. Open VRCL Client and start managing your VRChat session.
