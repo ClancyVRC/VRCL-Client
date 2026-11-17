@@ -14,16 +14,9 @@
 ## Patch Notes & Update Information
 
 <p align="center">
-  <strong>v1.0.3 Full</strong><br>
-  <sub>RELEASE VERIFICATION COMPLETED · NOVEMBER 17, 2026 · 12:05 AM CST (UTC−06:00)</sub>
+  <strong>MAINTENANCE COMPLETED</strong><br>
+  <sub>NOVEMBER 17, 2026 · 12:05 AM CST (UTC−06:00)</sub>
 </p>
-
-### v1.0.3 Full
-- Refreshed the purple Default theme and polished the Main Menu and Settings.
-- Improved VR/Desktop controls, keybinds, session status, and Discord Activity.
-- Improved Beta/Full update support, rollback, and protection of personal Data.
-- Fixed updater, installer, and uninstaller handling.
-- Added the GitHub Page button and refined Experimental Options.
 
 ---
 
