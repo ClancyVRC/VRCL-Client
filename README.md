@@ -11,7 +11,7 @@
 
 ---
 
-## Patch Notes & Update Information
+## Update Information
 
 <p align="center">
   <strong>✅ MAINTENANCE COMPLETED ✅</strong><br>
