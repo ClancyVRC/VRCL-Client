@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Get in & out of VRChat, Fast.</strong><br>
+  <strong>Manage Your VRChat Sessions</strong><br>
   Launch and manage VRChat in VR or Desktop mode, customize your setup, and keep your sessions under control.
 </p>
 
@@ -15,6 +15,7 @@
 
 <p align="center">
   <strong>MAINTENANCE COMPLETED</strong><br>
+  All currently available versions have been fixed and tested.<br>
   <sub>NOVEMBER 17, 2026 · 12:05 AM CST (UTC−06:00)</sub>
 </p>
 
@@ -81,5 +82,5 @@ For details about local files, GitHub update checks, and optional Discord Activi
 
 <p align="center">
   <strong>VRCL Client</strong><br>
-  <em>Get in & out of VRChat, Fast.</em>
+  <em>Manage Your VRChat Sessions</em>
 </p>
