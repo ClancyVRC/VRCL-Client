@@ -5,116 +5,112 @@
 </p>
 
 <p align="center">
-  <strong>Take control of your VRChat sessions.</strong><br>
-  Manage VR and Desktop sessions from one place. Launch VRChat, start SteamVR when needed, monitor your session, and quickly restart or close VRChat whenever you need.
-</p>
-
-<p align="center">
-  <strong>✅ MAINTENANCE COMPLETE · 5/5 FIXES COMPLETE</strong><br>
-  All listed releases have passed maintenance testing.
+  <strong>Get in & out of VRChat, Fast.</strong><br>
+  Control VR and Desktop sessions, manage PCVR startup, monitor activity, and customize your VRChat workflow from one Windows app.
 </p>
 
 ---
 
-<div align="center">
+## Patch Notes & Update Information
 
-## 🛠️ Patch Notes & Update Information
+<p align="center">
+  <strong>Current Full Release: v1.0.3</strong><br>
+  <sub>RELEASE VALIDATION COMPLETED · NOVEMBER 17, 2026 · 12:05 AM CST (UTC−06:00)</sub>
+</p>
 
-<sub>MAINTENANCE COMPLETE · NOVEMBER 17, 2026</sub>
+### v1.0.3 Full — Session Management & UI Polish
 
-</div>
+A more complete VRChat session-management experience with a refreshed purple Default theme, smoother controls, and clearer status information.
 
-> [!IMPORTANT]
-> **VRCL Client maintenance testing is complete.**
->
-> - **v1.0.0-release-beta:** Fixed and tested.
-> - **v1.0.1-release-beta:** Fixed and tested.
-> - **v1.0.2-release-beta:** Fixed and tested.
-> - **v1.0.3-release-beta:** Fixed and tested.
-> - **v1.0.3 Full:** Fixed and tested.
->
-> All five listed releases have passed their installation, update, rollback, and uninstallation checks.
+#### Changes
+- Refined the Main Menu and Settings layout while restoring the Default theme’s deep-purple background, violet header and footer, and matching darker session cards.
+- Improved separate VR and Desktop session controls, including their launch, restart, close, and keyboard shortcut workflows.
+- Expanded session awareness with clearer VRCL, SteamVR, and VRChat activity, plus Discord Activity Status when enabled.
+- Polished Settings controls with consistent sliding toggles, clearer experimental options, a Hide Status control, and optional font customization.
+- Unified Settings and Patch Notes scrolling behavior and improved theme/color consistency across menus and controls.
+- Kept the Data folder visible while retaining protected user-data handling during supported updates.
+- Added the Rollback Version control beneath Restart App.
+- Added a GitHub Page button beside Give Feedback in App Information.
 
-### Current status
-- **v1.0.0-release-beta:** Complete.
-- **v1.0.1-release-beta:** Complete.
-- **v1.0.2-release-beta:** Complete.
-- **v1.0.3-release-beta:** Complete.
-- **v1.0.3 Full:** Complete.
-- Further updates will be posted here as testing progresses.
+#### Fixes
+- Corrected visual balance in the Main Menu, including the center-card colors and the Default theme background.
+- Improved Settings header alignment and centered the status text inside its footer widget.
+- Prevented the font selector from cycling through choices when scrolling over the closed dropdown.
+- Improved status-widget visibility so it appears only on the Main Menu while session and Discord status continue updating elsewhere.
+- Added clear separators between each version in Patch Notes and refined spacing and readability.
+- Expanded update discovery to support published Beta and Full releases together.
+- Added one-release rollback selection; at the oldest published release, Rollback Version reinstalls that same release.
+- Updated the bundled updater to run outside the install folder, fully mirror the selected release, remove obsolete application files, preserve Data, and replace its own updater safely.
+- Strengthened uninstallation with external cleanup, installation-specific Oculus CLI process matching, managed desktop-entry cleanup, and complete installation-folder removal.
+
+#### Additions
+- Added a short explanation under Experimental Options and grouped its available controls directly beneath the setting.
+- Added a divider between Hide Status and Fonts to make experimental settings easier to scan.
 
 ---
 
 ## What is VRCL Client?
 
-**VRCL** stands for **VRChat Launcher**.
+**VRCL** stands for **VRChat Launcher**. VRCL Client is a Windows companion for starting and managing VRChat sessions. It provides separate controls for VR and Desktop play, brings common PCVR startup options into one place, and keeps session tools and app settings easy to reach.
 
-VRCL Client is a Windows companion built around one main idea: **make managing your VRChat sessions easier.** Instead of juggling separate shortcuts, startup steps, and settings, VRCL brings your VR and Desktop launch controls and everyday VRChat tools together in one place.
+## Current Features
 
-## Main features
+### VRChat Session Controls
+- **Start VRChat (VR):** Starts SteamVR, waits for it to initialize, and then launches VRChat in VR mode.
+- **Launch VRChat (Desktop):** Starts VRChat through Steam in Desktop mode without unnecessarily launching SteamVR.
+- **Restart sessions:** Restart the active VR or Desktop session from the Main Menu.
+- **Close VRChat:** Close VRChat and the related active VR session processes.
+- **Live session status:** View VRCL activity and the current session state from the Main Menu.
 
-### 🎮 VR and Desktop session controls
+### PCVR Startup & Detection
+- **Automatic application scanning:** Scan for Steam, SteamVR, VRChat, Meta PCVR, and supported cache locations.
+- **Saved application paths:** Review, reset, or adjust detected application paths in Settings.
+- **Meta / Quest PCVR startup:** Use the optional Oculus Startup System for supported Meta PCVR setups.
+- **ASW control:** Manage Oculus Asynchronous Spacewarp through VRCL on supported installations.
 
-Manage both ways of playing VRChat without mixing their startup behavior.
+### Settings & Personalization
+- **Themes:** Choose from Default, Dark, Light, and available themed backgrounds.
+- **Colors:** Customize the app’s text, accents, and visual details with the available color choices.
+- **Animated appearance options:** Use supported animated color effects, including Coat of Color and developer-only color options.
+- **Fonts:** Choose an optional interface font through Experimental Options.
+- **Status visibility:** Hide the app status from Discord Activity when preferred.
 
-- **Start VRChat (VR):** Launches SteamVR, allows time for it to start, and then launches VRChat in VR mode.
-- **Start VRChat (Desktop):** Opens VRChat through Steam in Desktop mode without unnecessarily starting SteamVR.
-- **Restart sessions:** Restart your VR or Desktop session from VRCL.
-- **Close sessions:** Close the relevant VRChat session using the dedicated controls.
-- **Tray controls:** Access common session actions from the Windows system tray.
-- **Keybinds:** Set keyboard shortcuts for the session actions you use most.
+### Discord Activity
+- **Rich Presence:** Share VRCL’s current activity through Discord when enabled.
+- **Session-aware status:** Keep Discord Activity updated as VRCL changes between the Main Menu and session actions.
+- **Visibility control:** Choose whether app status is shown in Discord.
 
-### 🥽 Meta / Quest PCVR support
+### Keybinds & Quick Access
+- **Custom keybinds:** Assign shortcuts to supported VRCL actions.
+- **Input modes:** Choose single-key or key-combination shortcuts.
+- **System tray menu:** Open VRCL, start or restart VR, close a session, clear supported caches, or exit from the Windows tray.
 
-VRCL includes options to help handle PCVR startup for supported Meta / Quest setups.
+### Updates, Rollback & App Management
+- **GitHub update checks:** Check published VRCL releases and download available updates.
+- **Beta and Full release support:** Detect and handle both published release types.
+- **Auto Update:** Enable automatic update behavior in Settings.
+- **Rollback Version:** Return to the immediately previous published VRCL release. At the oldest available release, the control reinstalls that same release.
+- **Protected user data:** Supported updates preserve the VRCL Data folder while replacing application files.
+- **Installer and uninstaller:** Install VRCL directly and remove the VRCL installation and its managed app entries when uninstalling.
 
-- **Oculus Startup System (OSS):** Optional startup sequence for Meta / Quest PCVR.
-- **PCVR detection:** Detects relevant VR software and can identify Meta / Quest PCVR setups.
-- **ASW controls:** Built-in control for Oculus Asynchronous Spacewarp on supported setups.
-- **Launch options:** Keep the VR startup sequence and related options together in Settings.
-
-### 🧰 Setup and PC tools
-
-Keep common setup and maintenance tasks close to your session controls.
-
-- First-run setup and PC detection.
-- VRChat and SteamVR setup checks.
-- Built-in VRChat cache clearing.
-- Quick access to common session and application actions.
-- Portable operation and application shortcuts.
-
-### 💬 Status and Discord Activity
-
-Keep track of what VRCL is doing and optionally show activity through Discord.
-
-- Built-in Discord Activity Status / Rich Presence.
-- App and session activity information.
-- Discord activity can be managed through VRCL's available settings.
-- Status features can reflect whether VRCL is launching or managing a session.
-
-### 🎨 Themes and personalization
-
-Make VRCL feel like your setup.
-
-- Light, Dark, and Default themes.
-- Custom colors and backgrounds.
-- Additional appearance options and experimental customization.
-- Animated color effects, including Coat of Color.
-- Settings for tailoring the app's look and behavior.
+### Setup & App Information
+- **First-launch setup:** Complete the initial VRCL setup before entering the Main Menu.
+- **Feedback:** Open the VRCL feedback form from App Information.
+- **GitHub Page:** Open the VRCL repository directly from Settings.
 
 ---
 
-## Your VRCL data
+## Your VRCL Data
 
 Your personal VRCL settings and application data are stored in the app's Data folder and account-specific locations.
 
-Keep a backup of your VRCL data before making manual changes to application files. Maintenance and compatibility work is ongoing; please wait for further instructions before changing versions.
+Back up your VRCL data before making manual changes to application files. The supported updater is designed to preserve the Data folder when updating application files.
 
 For details about local files, GitHub update checks, and optional Discord Activity, see the [Privacy Statement](PRIVACY.md).
 
 ---
 
-## Project information
+## Project Information
 
 <p align="center">
   <a href="PRIVACY.md">🔒 Privacy Statement</a>
@@ -128,5 +124,5 @@ For details about local files, GitHub update checks, and optional Discord Activi
 
 <p align="center">
   <strong>VRCL Client</strong><br>
-  <em>Manage your VRChat sessions.</em>
+  <em>Get in & out of VRChat, Fast.</em>
 </p>
