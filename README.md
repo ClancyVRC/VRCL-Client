@@ -11,8 +11,8 @@
 
 <p align="center">
   <strong>🛠️ MAINTENANCE UPDATE · NOVEMBER 16, 2026</strong><br>
-  <strong>v1.0.0-release-beta has been fixed and passed initial installation and uninstallation testing.</strong><br>
-  Four additional version updates are in progress. The remaining releases are still on maintenance hold while compatibility fixes and testing continue.
+  <strong>2/5 version fixes complete:</strong> v1.0.0-release-beta and v1.0.1-release-beta have passed their current build, installation, update, and uninstallation tests.<br>
+  Three additional version fixes are in progress. Remaining releases stay on maintenance hold while compatibility fixes and testing continue.
 </p>
 
 ---
@@ -28,13 +28,16 @@
 > [!IMPORTANT]
 > **VRCL Client remains under maintenance.**
 >
-> **v1.0.0-release-beta:** Core maintenance fixes are complete, and the build, installation, and full-folder uninstallation have passed initial testing.
+> **v1.0.0-release-beta:** Fixes complete; build, fresh installation, and full-folder uninstallation passed testing.
 >
-> **Four additional version updates are in progress.** Their updater, rollback, uninstaller, and compatibility behavior are still being reviewed and tested. Please wait for further announcements before updating or installing those versions.
+> **v1.0.1-release-beta:** Fixes complete; build, direct installation, update from 1.0.0, and uninstallation passed testing.
+>
+> **Three additional version fixes are in progress.** Their updater, rollback, uninstaller, and compatibility behavior are still being reviewed and tested. Please wait for further announcements before installing or changing versions.
 
 ### Current status
-- **1.0.0-release-beta:** Fixed; initial build, install, and uninstall tests passed.
-- **Four other version updates:** In progress.
+- **1.0.0-release-beta:** Fixed; build, installation, and uninstallation tests passed.
+- **1.0.1-release-beta:** Fixed; build, installation, update, and uninstallation tests passed.
+- **Three remaining version updates:** In progress.
 - Remaining releases stay on hold until their fixes and compatibility tests are complete.
 - Further updates will be posted here as testing progresses.
 
