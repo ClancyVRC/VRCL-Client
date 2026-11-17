@@ -11,8 +11,8 @@
 
 <p align="center">
   <strong>🛠️ MAINTENANCE UPDATE · NOVEMBER 16, 2026</strong><br>
-  <strong>2/5 version fixes complete:</strong> v1.0.0-release-beta and v1.0.1-release-beta have passed their current build, installation, update, and uninstallation tests.<br>
-  Three additional version fixes are in progress. Remaining releases stay on maintenance hold while compatibility fixes and testing continue.
+  <strong>3/5 version fixes complete:</strong> v1.0.0-release-beta, v1.0.1-release-beta, and v1.0.2-release-beta have passed their current installation, update, and uninstallation tests.<br>
+  Two additional version fixes are in progress. Remaining releases stay on maintenance hold while compatibility fixes and testing continue.
 </p>
 
 ---
@@ -32,12 +32,15 @@
 >
 > **v1.0.1-release-beta:** Fixes complete; build, direct installation, update from 1.0.0, and uninstallation passed testing.
 >
-> **Three additional version fixes are in progress.** Their updater, rollback, uninstaller, and compatibility behavior are still being reviewed and tested. Please wait for further announcements before installing or changing versions.
+> **v1.0.2-release-beta:** Fixes complete; updates from 1.0.0 and 1.0.1, direct installation, and uninstallation passed testing.
+>
+> **Two additional version fixes are in progress.** Their updater, rollback, uninstaller, and compatibility behavior are still being reviewed and tested. Please wait for further announcements before installing or changing versions.
 
 ### Current status
 - **1.0.0-release-beta:** Fixed; build, installation, and uninstallation tests passed.
 - **1.0.1-release-beta:** Fixed; build, installation, update, and uninstallation tests passed.
-- **Three remaining version updates:** In progress.
+- **1.0.2-release-beta:** Fixed; direct installation, cross-version updates, and uninstallation tests passed.
+- **Two remaining version updates:** In progress.
 - Remaining releases stay on hold until their fixes and compatibility tests are complete.
 - Further updates will be posted here as testing progresses.
 
