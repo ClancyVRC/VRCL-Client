@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <strong>🛠️ MAINTENANCE IN PROGRESS · 3/5 FIXES COMPLETE</strong><br>
-  v1.0.3 Beta and Full are currently being updated.
+  <strong>🛠️ MAINTENANCE IN PROGRESS · 4/5 FIXES COMPLETE</strong><br>
+  v1.0.3 Beta testing is complete. v1.0.3 Full is the remaining release under maintenance.
 </p>
 
 ---
@@ -33,15 +33,16 @@
 >
 > **v1.0.2-release-beta:** Fixes complete; updates from 1.0.0 and 1.0.1, direct installation, and uninstallation passed testing.
 >
-> **Two additional package fixes are in progress:** v1.0.3-release-beta and v1.0.3. Their updater, rollback, uninstaller, and compatibility behavior are being reviewed and tested separately. Please wait for further announcements before installing or changing versions.
+> **v1.0.3-release-beta:** Fixes and user testing complete. Updates from 1.0.0, 1.0.1, and 1.0.2; direct installation; uninstallation; rollback through 1.0.2, 1.0.1, and 1.0.0; and reinstalling 1.0.0 all passed.
+>
+> **v1.0.3 Full:** The remaining release still requires its own fixes and testing. Please wait for a further announcement before installing or changing versions.
 
 ### Current status
 - **1.0.0-release-beta:** Fixed; build, installation, and uninstallation tests passed.
 - **1.0.1-release-beta:** Fixed; build, installation, update, and uninstallation tests passed.
 - **1.0.2-release-beta:** Fixed; direct installation, cross-version updates, and uninstallation tests passed.
-- **1.0.3-release-beta:** In progress.
-- **1.0.3:** In progress.
-- Remaining public releases stay on hold until their fixes and compatibility tests are complete.
+- **1.0.3-release-beta:** Fixed; all reported update, rollback, direct installation, uninstallation, and reinstall tests passed.
+- **1.0.3:** Not yet started; remains the final public release in this maintenance pass.
 - Further updates will be posted here as testing progresses.
 
 ---
