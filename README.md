@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <strong>🛠️ MAINTENANCE IN PROGRESS · 4/5 FIXES COMPLETE</strong><br>
-  v1.0.3 Beta is fixed and tested. v1.0.3 Full is the remaining release under maintenance.
+  <strong>🛠️ MAINTENANCE IN PROGRESS · 3/5 FIXES COMPLETE</strong><br>
+  Both v1.0.3 releases passed their main tests; a small updater correction is being retested.
 </p>
 
 ---
@@ -30,8 +30,8 @@
 > - **v1.0.0-release-beta:** Fixed and tested.
 > - **v1.0.1-release-beta:** Fixed and tested.
 > - **v1.0.2-release-beta:** Fixed and tested.
-> - **v1.0.3-release-beta:** Fixed and tested.
-> - **v1.0.3 Full:** Still needs fixes and testing.
+> - **v1.0.3-release-beta:** Main tests passed; updater correction pending retest.
+> - **v1.0.3 Full:** Main tests passed; updater correction pending retest.
 >
 > Please wait for another announcement before changing versions.
 
@@ -39,7 +39,7 @@
 - **v1.0.0-release-beta:** Complete.
 - **v1.0.1-release-beta:** Complete.
 - **v1.0.2-release-beta:** Complete.
-- **v1.0.3-release-beta:** Complete.
+- **v1.0.3-release-beta:** Retest pending (updater correction).
 - **v1.0.3 Full:** Still needs fixes and testing.
 - Further updates will be posted here as testing progresses.
 
