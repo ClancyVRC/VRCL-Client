@@ -10,9 +10,8 @@
 </p>
 
 <p align="center">
-  <strong>🛠️ MAINTENANCE UPDATE · NOVEMBER 16, 2026</strong><br>
-  <strong>3/5 version fixes complete:</strong> v1.0.0-release-beta, v1.0.1-release-beta, and v1.0.2-release-beta have passed their current installation, update, and uninstallation tests.<br>
-  Two additional package fixes are in progress: v1.0.3-release-beta and v1.0.3. Remaining public releases stay on maintenance hold while compatibility fixes and testing continue.
+  <strong>🛠️ MAINTENANCE IN PROGRESS · 3/5 FIXES COMPLETE</strong><br>
+  v1.0.3 Beta and Full are currently being updated.
 </p>
 
 ---
