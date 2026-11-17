@@ -40,7 +40,7 @@
 - **v1.0.1-release-beta:** Complete.
 - **v1.0.2-release-beta:** Complete.
 - **v1.0.3-release-beta:** Retest pending (updater correction).
-- **v1.0.3 Full:** Still needs fixes and testing.
+- **v1.0.3 Full:** Retest pending (updater correction).
 - Further updates will be posted here as testing progresses.
 
 ---
