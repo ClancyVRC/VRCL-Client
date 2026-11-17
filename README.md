@@ -25,24 +25,19 @@
 </div>
 
 > [!IMPORTANT]
-> **VRCL Client remains under maintenance.**
+> **VRCL Client is still under maintenance.**
 >
-> **v1.0.0-release-beta:** Fixes complete; build, fresh installation, and full-folder uninstallation passed testing.
+> - **1.0.0, 1.0.1, 1.0.2 and 1.0.3 Beta:** Fixes and testing complete.
+> - **1.0.3 Full:** Still needs fixes and testing.
 >
-> **v1.0.1-release-beta:** Fixes complete; build, direct installation, update from 1.0.0, and uninstallation passed testing.
->
-> **v1.0.2-release-beta:** Fixes complete; updates from 1.0.0 and 1.0.1, direct installation, and uninstallation passed testing.
->
-> **v1.0.3-release-beta:** Fixes and user testing complete. Updates from 1.0.0, 1.0.1, and 1.0.2; direct installation; uninstallation; rollback through 1.0.2, 1.0.1, and 1.0.0; and reinstalling 1.0.0 all passed.
->
-> **v1.0.3 Full:** The remaining release still requires its own fixes and testing. Please wait for a further announcement before installing or changing versions.
+> Please wait for another announcement before changing versions.
 
 ### Current status
-- **1.0.0-release-beta:** Fixed; build, installation, and uninstallation tests passed.
-- **1.0.1-release-beta:** Fixed; build, installation, update, and uninstallation tests passed.
-- **1.0.2-release-beta:** Fixed; direct installation, cross-version updates, and uninstallation tests passed.
-- **1.0.3-release-beta:** Fixed; all reported update, rollback, direct installation, uninstallation, and reinstall tests passed.
-- **1.0.3:** Not yet started; remains the final public release in this maintenance pass.
+- **1.0.0-release-beta:** Complete.
+- **1.0.1-release-beta:** Complete.
+- **1.0.2-release-beta:** Complete.
+- **1.0.3-release-beta:** Complete; updates, rollback, installation and uninstallation tested successfully.
+- **1.0.3 Full:** Not started; next in line.
 - Further updates will be posted here as testing progresses.
 
 ---
