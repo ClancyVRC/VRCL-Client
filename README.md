@@ -10,8 +10,9 @@
 </p>
 
 <p align="center">
-  <strong>⚠️ TEMPORARILY UNDER MAINTENANCE</strong><br>
-  All VRCL Client versions are currently undergoing fixes and compatibility testing. Downloads and version changes are on hold for now.
+  <strong>🛠️ MAINTENANCE UPDATE · NOVEMBER 16, 2026</strong><br>
+  <strong>v1.0.0-release-beta has been fixed and passed initial installation and uninstallation testing.</strong><br>
+  Four additional version updates are in progress. The remaining releases are still on maintenance hold while compatibility fixes and testing continue.
 </p>
 
 ---
@@ -25,15 +26,17 @@
 </div>
 
 > [!IMPORTANT]
-> **VRCL Client is temporarily on hold while maintenance is underway.**
+> **VRCL Client remains under maintenance.**
 >
-> All versions, including older releases and the upcoming 1.0.4 beta, are undergoing fixes, maintenance, and compatibility testing. Please wait while this work is completed. We'll post an update here as soon as possible.
+> **v1.0.0-release-beta:** Core maintenance fixes are complete, and the build, installation, and full-folder uninstallation have passed initial testing.
+>
+> **Four additional version updates are in progress.** Their updater, rollback, uninstaller, and compatibility behavior are still being reviewed and tested. Please wait for further announcements before updating or installing those versions.
 
 ### Current status
-- Development and distribution are temporarily on hold.
-- Existing and upcoming versions are being reviewed and repaired.
-- Public version changes will resume after testing is complete.
-- Please check this page for the next maintenance update.
+- **1.0.0-release-beta:** Fixed; initial build, install, and uninstall tests passed.
+- **Four other version updates:** In progress.
+- Remaining releases stay on hold until their fixes and compatibility tests are complete.
+- Further updates will be posted here as testing progresses.
 
 ---
 
