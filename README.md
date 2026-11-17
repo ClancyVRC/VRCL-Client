@@ -10,19 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20DOWNLOAD%20VRCL%20INSTALLER-5B2DE8?style=for-the-badge" alt="Download VRCL Installer">
-  </a>
-  <br>
-  <a href="https://dotnet.microsoft.com/en-us/download">
-    <img src="https://img.shields.io/badge/%E2%AC%87%20GET%20.NET%2010-512BD4?style=for-the-badge" alt="Get .NET 10">
-  </a>
-  <br>
-  <sub>Windows x64 · .NET 10 · VRChat session management</sub>
-</p>
-
-<p align="center">
-  <strong>VRCL Installer is self-contained.</strong> VRCL Client requires the .NET 10 Desktop Runtime.
+  <strong>⚠️ TEMPORARILY UNDER MAINTENANCE</strong><br>
+  All VRCL Client versions are currently undergoing fixes and compatibility testing. Downloads and version changes are on hold for now.
 </p>
 
 ---
@@ -31,23 +20,20 @@
 
 ## 🛠️ Patch Notes & Update Information
 
-<sub>INSTALLER &amp; UPDATER NOTICE · NOVEMBER 10, 2026</sub>
+<sub>MAINTENANCE NOTICE · NOVEMBER 16, 2026</sub>
 
 </div>
 
 > [!IMPORTANT]
-> The VRCL Installer and update system have been updated to improve release detection, installation, and version compatibility.
+> **VRCL Client is temporarily on hold while maintenance is underway.**
+>
+> All versions, including older releases and the upcoming 1.0.4 beta, are undergoing fixes, maintenance, and compatibility testing. Please wait while this work is completed. We'll post an update here as soon as possible.
 
-### VRCL Installer
-- Fixed release detection so the installer can find and offer the latest compatible published VRCL Client version.
-- Fixed the installation flow for installing the latest available release.
-- If you have an older copy of `VRCL.Installer.exe`, we recommend deleting that copy from your PC and downloading the current installer using the **Download VRCL Installer** button above.
-
-### Update compatibility
-- **v1.0.0-release-beta through v1.0.2-release-beta:** These older builds use a legacy update system and currently update to the latest beta release, rather than moving directly to full releases.
-- **v1.0.3-release-beta and newer:** The updated updater supports moving to any compatible published beta or full release.
-
-<sub>Tested successfully on the developer's system. Additional testing on another PC is still pending.</sub>
+### Current status
+- Development and distribution are temporarily on hold.
+- Existing and upcoming versions are being reviewed and repaired.
+- Public version changes will resume after testing is complete.
+- Please check this page for the next maintenance update.
 
 ---
 
@@ -108,67 +94,15 @@ Make VRCL feel like your setup.
 - Animated color effects, including Coat of Color.
 - Settings for tailoring the app's look and behavior.
 
-### 🔄 Updates and data protection
-
-VRCL includes its own update flow so supported updates are easier to install.
-
-- Check for compatible VRCL Client releases.
-- Use the bundled VRCL Updater for supported updates.
-- Preserve your existing `Data/` folder during supported updates.
-- Keep your settings and personal app data when moving to a newer version.
-
----
-
-## Install VRCL Client
-
-The latest public release currently available is **v1.0.2-release-beta**.
-
-1. Download **[VRCL.Installer.exe](https://github.com/ClancyVRC/VRCL-Client/releases/download/v1.0.0-release-beta/VRCL.Installer.exe)** using the installer button above.
-2. Run the installer and choose where you want VRCL Client installed.
-3. Let the installer find and install a compatible published version.
-4. Open VRCL Client and start managing your VRChat session.
-
-The standalone installer:
-
-- Checks the official GitHub Releases for compatible VRCL Client packages.
-- Finds the newest compatible published version.
-- Supports the versioned VRCL ZIP package formats.
-- Verifies SHA-256 when GitHub provides a digest.
-- Installs to the location you choose.
-- Preserves supported existing `Data/` content.
-
-[Browse all VRCL Client releases](https://github.com/ClancyVRC/VRCL-Client/releases)
-
-> VRCL Client is still in beta. Features and behavior may change as the project continues to develop. Only versions published on the Releases page are public downloads.
-
 ---
 
 ## Your VRCL data
 
-Your personal VRCL settings and application data are stored in the `Data/` folder.
+Your personal VRCL settings and application data are stored in the app's Data folder and account-specific locations.
 
-**Keep your Data folder when updating or moving VRCL Client** if you want to retain your existing settings and personal app data. Supported installer and updater operations are designed to preserve it.
+Keep a backup of your VRCL data before making manual changes to application files. Maintenance and compatibility work is ongoing; please wait for further instructions before changing versions.
 
 For details about local files, GitHub update checks, and optional Discord Activity, see the [Privacy Statement](PRIVACY.md).
-
----
-
-## 🛡️ Security Scan & Download Reputation
-
-VRCL Client and its installer are relatively new, so Windows may display a Microsoft Defender SmartScreen message stating that the installer is **not commonly downloaded** or that its publisher is unknown. This is a reputation warning and does not, by itself, mean the file has been identified as malware.
-
-A submission for `VRCL.Installer.exe` has been successfully received by Microsoft for review. The review is pending; this does not mean Microsoft has approved or certified the installer.
-
-The submitted installer was also scanned with VirusTotal. **The shared report showed no antivirus detections at the time it was checked.** You can view the report and its current results here:
-
-<p align="center">
-  <a href="https://www.virustotal.com/gui/file/26d59c00e35af47f6ba34929be1d665c6a1f08f6533c33772c69c340d833eabf">
-    <img src="https://img.shields.io/badge/VIEW%20VIRUSTOTAL%20SCAN-394EFF?style=for-the-badge" alt="View VRCL Installer VirusTotal report">
-  </a>
-</p>
-
-> VirusTotal results can change as security vendors update their detections. A clean scan is reassuring, but it is not an absolute guarantee that a file is harmless. Always download VRCL Installer from this official repository.
-
 
 ---
 
@@ -183,7 +117,6 @@ The submitted installer was also scanned with VirusTotal. **The shared report sh
 </p>
 
 ---
-
 
 <p align="center">
   <strong>VRCL Client</strong><br>
