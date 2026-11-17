@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <strong>🛠️ MAINTENANCE IN PROGRESS · 3/5 FIXES COMPLETE</strong><br>
-  Both v1.0.3 releases passed their main tests; a small updater correction is being retested.
+  <strong>✅ MAINTENANCE COMPLETE · 5/5 FIXES COMPLETE</strong><br>
+  All listed releases have passed maintenance testing.
 </p>
 
 ---
@@ -20,27 +20,27 @@
 
 ## 🛠️ Patch Notes & Update Information
 
-<sub>MAINTENANCE NOTICE · NOVEMBER 16, 2026</sub>
+<sub>MAINTENANCE COMPLETE · NOVEMBER 17, 2026</sub>
 
 </div>
 
 > [!IMPORTANT]
-> **VRCL Client is still under maintenance.**
+> **VRCL Client maintenance testing is complete.**
 >
 > - **v1.0.0-release-beta:** Fixed and tested.
 > - **v1.0.1-release-beta:** Fixed and tested.
 > - **v1.0.2-release-beta:** Fixed and tested.
-> - **v1.0.3-release-beta:** Main tests passed; updater correction pending retest.
-> - **v1.0.3 Full:** Main tests passed; updater correction pending retest.
+> - **v1.0.3-release-beta:** Fixed and tested.
+> - **v1.0.3 Full:** Fixed and tested.
 >
-> Please wait for another announcement before changing versions.
+> All five listed releases have passed their installation, update, rollback, and uninstallation checks.
 
 ### Current status
 - **v1.0.0-release-beta:** Complete.
 - **v1.0.1-release-beta:** Complete.
 - **v1.0.2-release-beta:** Complete.
-- **v1.0.3-release-beta:** Retest pending (updater correction).
-- **v1.0.3 Full:** Retest pending (updater correction).
+- **v1.0.3-release-beta:** Complete.
+- **v1.0.3 Full:** Complete.
 - Further updates will be posted here as testing progresses.
 
 ---
