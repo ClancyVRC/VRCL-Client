@@ -27,10 +27,10 @@
 > [!IMPORTANT]
 > **VRCL Client is still under maintenance.**
 >
-> - **v1.0.0-release-beta:** Fixed and tested.
+> - **v1.0.0-release-beta:** Fixed and tested. 
 > - **v1.0.1-release-beta:** Fixed and tested.
 > - **v1.0.2-release-beta:** Fixed and tested.
-> - **v1.0.3-release-beta:** Fixed and tested, including updates and rollback.
+> - **v1.0.3-release-beta:** Fixed and tested,
 > - **v1.0.3 Full:** Still needs fixes and testing.
 >
 > Please wait for another announcement before changing versions.
